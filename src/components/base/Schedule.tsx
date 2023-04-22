@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 import { Container } from './Container';
 import { Text } from './Text';
+import { pageSettings } from 'src/utils/pageSettings';
 
 const StyledDiv = styled.div`
     padding: 20px;
@@ -13,8 +14,9 @@ const StyledDiv = styled.div`
 `;
 
 export const Schedule = ({ selectedDriver }: { selectedDriver: string }) => {
+    console.log(selectedDriver);
     return (
-        <Container title="Schedule" id="schedule" hasLightBackground height={'140vh'}>
+        <Container title="Schedule" id="schedule" hasLightBackground height={'140vh'} darkTitleColor>
             <StyledDiv>
                 <Text color={'var(--primary)'} type="header">
                     You are scheduling with <span style={{ color: 'var(--background)' }}>{selectedDriver}</span>
@@ -22,15 +24,13 @@ export const Schedule = ({ selectedDriver }: { selectedDriver: string }) => {
             </StyledDiv>
 
             <InlineWidget
-                pageSettings={
-                    {
-                        // backgroundColor: 'var(--background)',
-                        // primaryColor: 'var(--primary)',
-                        // textColor: 'var(--background)',
-                    }
-                }
+                pageSettings={{
+                    backgroundColor: 'var(--background)',
+                    primaryColor: 'var(--primary)',
+                    textColor: 'var(--background)',
+                }}
                 styles={{ height: '100vh' }}
-                url="https://calendly.com/accastro1307/30min"
+                url={pageSettings[selectedDriver].calendly}
             />
         </Container>
     );

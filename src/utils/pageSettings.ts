@@ -2,6 +2,7 @@ export const pageSettings = {
     website_title: 'VanCastro Driving School',
     logo: 'VanCastro',
     navMenu: ['About', 'Prices', 'Schedule', 'Reviews', 'Policies', 'Contact'],
+    driverNav: ['About', 'Schedule'],
     client_name: 'VanCastro',
     client_location: 'Vancouver',
     company_creation_date: '2002',
@@ -15,12 +16,14 @@ export const pageSettings = {
     andresa: {
         logo: '/andresa.png',
         display_name: 'Andresa',
+        calendly: 'https://calendly.com/s/30min',
         about: 'With experience in training in Brazil and Canada, Andresa started out taking care of the administrative side of VanCastro and over time began to admire how happy and fulfilled Anderson had become with the birth and growth of VanCastro. In a short time, she decided to study to also acquire her license to also become an Instructor Driver. Andresa also has over 25 years driving experience. If you have a challenge, Andresa is the woman to call.',
     },
 
     anderson: {
         logo: '/anderson.png',
         display_name: 'Anderson',
+        calendly: 'https://calendly.com/accastro1307/30min',
         about: 'His passion for cars started long time ago. Anderson worked in Brazil for many years developing great safe work environments. Always focus in safe. When he got his BC driving licence in Vancouver-Canada, he saw the perfect combination of the two of his passion, cars and safe. Starting at this point, VanCastro Driving School came to make the dream reality.  Anderson is a solid hard-working Driving instructor with more than 25 years driving around the world. His calm demeanor helps him to specialise in the nervous student. Also, Anderson can teach in Portuguese and English. He can help you, give him a call!',
     },
 

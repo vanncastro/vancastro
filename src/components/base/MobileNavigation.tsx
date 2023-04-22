@@ -24,7 +24,31 @@ const StyledLogo = styled.div<{ margin?: string }>`
     margin: ${props => props.margin || '0'};
 `;
 
-export const MobileNavigation = () => {
+const StyledText = styled.p`
+    font-size: 28px;
+    display: block;
+    font-weight: 700;
+    text-transform: capitalize;
+`;
+
+const pageIteration = pg => {
+    return pg.map(item => (
+        <ReactScroll key={item} to={item.toLowerCase()} spy smooth>
+            <Button
+                sx={{
+                    color: 'var(--white)',
+                    display: 'block',
+                    margin: '10px auto',
+                    fontFamily: 'var(--font-family)',
+                }}
+            >
+                {item}
+            </Button>
+        </ReactScroll>
+    ));
+};
+
+export const MobileNavigation = ({ driverPage }: { driverPage: boolean }) => {
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
@@ -32,7 +56,7 @@ export const MobileNavigation = () => {
     };
 
     return (
-        <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
+        <Box sx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }}>
             <AppBar component="nav" sx={{ backgroundColor: 'var(--primary) !important;' }}>
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <IconButton
@@ -40,7 +64,7 @@ export const MobileNavigation = () => {
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
+                        sx={{ mr: 2, display: { xs: 'flex', sm: 'flex', md: 'none' } }}
                     >
                         <MenuIcon />
                     </IconButton>
@@ -69,7 +93,7 @@ export const MobileNavigation = () => {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'none' },
+                        display: { xs: 'flex', sm: 'flex', md: 'none' },
                         '& .MuiDrawer-paper': {
                             boxSizing: 'border-box',
                             width: '250px',
@@ -78,30 +102,19 @@ export const MobileNavigation = () => {
                     }}
                 >
                     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-                        <StyledLogo>
-                            <Text type="header" color="var(--white)">
-                                {pageSettings.logo}
-                            </Text>
-                            <Text type="small" color="var(--white)">
-                                Driving School
-                            </Text>
-                        </StyledLogo>
+                        <Link href="/" style={{ textDecoration: 'none' }}>
+                            <StyledLogo>
+                                <Text type="header" color="var(--white)">
+                                    {pageSettings.logo}
+                                </Text>
+                                <Text type="small" color="var(--white)">
+                                    Driving School
+                                </Text>
+                            </StyledLogo>
+                        </Link>
                         <Divider sx={{ backgroundColor: 'var(--white)', marginTop: '20px' }} />
                         <List>
-                            {pageSettings.navMenu.map(item => (
-                                <ReactScroll key={item} to={item.toLowerCase()} spy smooth>
-                                    <Button
-                                        sx={{
-                                            color: 'var(--white)',
-                                            display: 'block',
-                                            margin: '10px auto',
-                                            fontFamily: 'var(--font-family)',
-                                        }}
-                                    >
-                                        {item}
-                                    </Button>
-                                </ReactScroll>
-                            ))}
+                            {!driverPage ? pageIteration(pageSettings.navMenu) : pageIteration(pageSettings.driverNav)}
                         </List>
                     </Box>
                 </Drawer>

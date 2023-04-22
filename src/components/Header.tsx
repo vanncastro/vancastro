@@ -42,11 +42,28 @@ const StyledLogo = styled.div`
     }
 `;
 
-export const Header = () => {
+const pageIteration = page => {
+    return page.map(pg => (
+        <Link key={pg} to={pg.toLowerCase()} spy smooth>
+            <Button
+                sx={{
+                    color: 'var(--white)',
+                    display: 'block',
+                    ml: { lg: '50px', md: '20px' },
+                    fontFamily: 'var(--font-family)',
+                }}
+            >
+                {pg}
+            </Button>
+        </Link>
+    ));
+};
+
+export const Header = ({ driverPage }: { driverPage: boolean }) => {
     return (
         <StyledAppBar position="static">
-            <MobileNavigation />
-            <Container maxWidth="xl" sx={{ display: { md: 'flex' } }}>
+            <MobileNavigation driverPage={driverPage} />
+            <Container maxWidth="xl" sx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }}>
                 <Toolbar disableGutters>
                     <Typography
                         component="a"
@@ -68,22 +85,8 @@ export const Header = () => {
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'space-around', overflow: 'scroll' }}>
-                        {pageSettings.navMenu.map(page => (
-                            <Link key={page} to={page.toLowerCase()} spy smooth>
-                                <Button
-                                    sx={{
-                                        color: 'var(--white)',
-                                        display: 'block',
-                                        ml: { lg: '50px', md: '20px' },
-                                        fontFamily: 'var(--font-family)',
-                                    }}
-                                >
-                                    {page}
-                                </Button>
-                            </Link>
-                        ))}
+                        {!driverPage ? pageIteration(pageSettings.navMenu) : pageIteration(pageSettings.driverNav)}
                     </Box>
-                    {/* {hasSelectedDriver && <Avatar selectedPerson={selectedPerson} />} */}
                 </Toolbar>
             </Container>
         </StyledAppBar>
