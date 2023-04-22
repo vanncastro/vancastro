@@ -17,7 +17,7 @@ export default function Home() {
     return (
         <>
             <span id="back-to-top-anchor"></span>
-            <Header />
+            <Header driverPage={false} />
             <Landing />
             <About />
             <Prices />
