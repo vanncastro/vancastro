@@ -15,6 +15,7 @@ const StyledContainer = styled.section<{ hasLightBackground?: boolean; height?: 
 
 const StyledTitle = styled.h3<{ darkTitleColor?: boolean }>`
     && {
+        font-family: var(--font-family);
         font-weight: bold;
         font-size: 3rem;
         color: ${({ darkTitleColor }) => (darkTitleColor ? COLORS.primary : COLORS.background)};
