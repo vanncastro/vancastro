@@ -11,17 +11,17 @@ import { pageSettings } from 'src/utils/pageSettings';
 const about = [
     {
         title: pageSettings.about.card1.title,
-        icon: <School fontSize="inherit" />,
+        icon: <School fontSize="inherit" sx={{ color: 'var(--primary)' }} />,
         description: pageSettings.about.card1.description,
     },
     {
         title: pageSettings.about.card1.title,
-        icon: <ThumbUp fontSize="inherit" />,
+        icon: <ThumbUp fontSize="inherit" sx={{ color: 'var(--primary)' }} />,
         description: pageSettings.about.card1.description,
     },
     {
         title: pageSettings.about.card1.title,
-        icon: <Build fontSize="inherit" />,
+        icon: <Build fontSize="inherit" sx={{ color: 'var(--primary)' }} />,
         description: pageSettings.about.card1.description,
     },
 ];
@@ -62,10 +62,10 @@ const AboutCard = ({ title, icon, description }) => {
         <CardWrapper sx={{ fontFamily: 'var(--font-family)' }}>
             <CardContentWrapper>
                 <IconWrapper>{icon}</IconWrapper>
-                <Typography variant="h4" gutterBottom fontFamily="inherit">
+                <Typography variant="h5" gutterBottom fontFamily="inherit" color="var(--primary)">
                     {title}
                 </Typography>
-                <Typography variant="body1" marginTop="30px" fontFamily="inherit">
+                <Typography variant="body1" marginTop="30px" fontFamily="inherit" color="var(--primary)">
                     {description}
                 </Typography>
             </CardContentWrapper>
@@ -75,7 +75,7 @@ const AboutCard = ({ title, icon, description }) => {
 
 export const About = () => {
     return (
-        <Container title={'About'} id="about" hasLightBackground>
+        <Container title={'About'} id="about" hasLightBackground darkTitleColor>
             <AboutWrapper>
                 {about.map(abt => (
                     <AboutCard key={abt.title} {...{ ...abt }} />

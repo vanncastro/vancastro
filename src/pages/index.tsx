@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Header } from '../components/Header';
 
@@ -11,25 +11,21 @@ import { Photos } from '../components/base/Photos';
 import { Prices } from '../components/Prices';
 import { ScrollTop } from 'src/components/base/ScrollTop';
 import { Policies } from 'src/components/Policies';
+import { Contact } from 'src/components/Contact';
 
 export default function Home() {
-    const [selectedPerson, setSelectedPerson] = useState('');
-
-    const handleSelectedPerson = (person: string) => {
-        setSelectedPerson(person);
-    };
-
     return (
         <>
             <span id="back-to-top-anchor"></span>
-            <Header selectedPerson={selectedPerson} />
-            <Landing handleSelectedPerson={handleSelectedPerson} />
+            <Header />
+            <Landing />
             <About />
             <Prices />
             <Drivers />
             <Reviews />
             <Photos />
             <Policies />
+            <Contact />
             <Footer />
             <ScrollTop />
         </>

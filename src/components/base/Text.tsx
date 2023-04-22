@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { COLORS, fontFamily } from '../../utils/utils';
 
 const StyledText = styled.p<{
     type?: string;
@@ -8,9 +7,9 @@ const StyledText = styled.p<{
     textAlign?: string;
     margin?: string;
 }>`
-    color: ${({ color }) => (color ? color : COLORS.background)};
+    color: ${({ color }) => (color ? color : 'var(--background)')};
 
-    font-family: ${fontFamily};
+    font-family: var(--font-family);
     height: ${({ height }) => (height ? height : 0)};
     margin: ${({ margin }) => margin || ''};
     ${({ type }) => {

@@ -3,7 +3,6 @@ import { Fragment } from 'react';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
-import { COLORS } from '../utils/utils';
 import { pageSettings } from 'src/utils/pageSettings';
 
 export default class MyDocument extends Document {
@@ -37,16 +36,16 @@ export default class MyDocument extends Document {
             <Html
                 lang="en"
                 style={{
-                    backgroundColor: COLORS.background,
+                    backgroundColor: 'var(--background)',
                 }}
             >
                 <title>{pageSettings.website_title}</title>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
                     rel="stylesheet"
-                />
+                ></link>
 
                 <Head />
                 <body

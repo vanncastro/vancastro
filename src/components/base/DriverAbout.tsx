@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import Image from 'next/image';
 
 import { Container } from './Container';
-import { Text } from './Text';
-import { COLORS } from 'src/utils/utils';
 import { pageSettings } from 'src/utils/pageSettings';
 
 const StyledContainer = styled.section`
@@ -20,7 +18,6 @@ const StyledContainer = styled.section`
 
     @media (max-width: 768px) {
         display: block;
-        width: 100%;
         margin: 0 auto;
     }
 `;
@@ -38,37 +35,67 @@ const StyledImageContainer = styled.div`
         width: 100%;
         display: flex;
         justify-content: center;
-        margin-left: -2em;
     }
 `;
 
 const StyledImage = styled(Image)`
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     height: 100%;
     object-fit: contain;
 `;
 
 const StyledTextContainer = styled.div`
-    width: 80%;
+    width: 100%;
     align-items: center;
-    margin-left: 2rem;
     line-height: 33px;
     letter-spacing: 1.3px;
+    height: 100%;
+`;
+
+const StyledTitle = styled.h3`
+    color: var(--primary);
+    font-size: 2.5rem;
+    font-family: var(--font-family);
+    width: 100%;
+    margin-top: -30px;
+    margin-left: 80px;
+    font-weight: bold;
 
     @media (max-width: 768px) {
-        width: 100%;
-        height: auto;
-        margin-left: -3rem;
-        margin-bottom: 200px;
-        display: block;
+        font-size: 1.6rem;
+        margin-top: 30px;
+        margin-left: 0px;
+        text-align: center;
+    }
+`;
+
+const StyledParagraph = styled.p`
+    color: var(--primary);
+    font-size: 1.7rem;
+    font-family: var(--font-family);
+    width: 100%;
+    line-height: 50px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-left: 80px;
+    font-weight: lighter;
+
+    text-align: left;
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+        line-height: 40px;
+        letter-spacing: 1.3px;
+        margin-top: 0;
+        margin-left: 0px;
     }
 `;
 
 export const DriverAbout = ({ selectedDriver }: { selectedDriver: string }) => {
     console.log(pageSettings[selectedDriver].display);
     return (
-        <Container id="about" title={`About`} darkTitleColor>
+        <Container id="about" title={`About`} darkTitleColor height={'100%'}>
             <StyledContainer>
                 <StyledImageContainer>
                     <StyledImage
@@ -80,12 +107,10 @@ export const DriverAbout = ({ selectedDriver }: { selectedDriver: string }) => {
                 </StyledImageContainer>
                 <StyledContentContainer>
                     <StyledTextContainer>
-                        <Text color={COLORS.primary} type="header" textAlign="center">
+                        <StyledTitle color={'var(--primary)'}>
                             Hello, I am {pageSettings[selectedDriver].display_name}!
-                        </Text>
-                        <Text color={COLORS.primary} type="body" margin={'60px 30px 20px 50px'}>
-                            {pageSettings[selectedDriver].about}
-                        </Text>
+                        </StyledTitle>
+                        <StyledParagraph color={'var(--primary)'}>{pageSettings[selectedDriver].about}</StyledParagraph>
                     </StyledTextContainer>
                 </StyledContentContainer>
             </StyledContainer>

@@ -112,7 +112,7 @@ export const Photos = () => {
     };
 
     return (
-        <Container paddingBottom="20px">
+        <Container height={'100%'}>
             <ImageList
                 sx={{
                     margin: '0 auto',
@@ -129,7 +129,7 @@ export const Photos = () => {
                             subtitle={item.author}
                             onClick={() => openImageViewer(index)}
                             actionIcon={
-                                <IconButton sx={{ color: 'red' }} aria-label={`info about ${item.title}`}>
+                                <IconButton sx={{ color: 'var(--white)' }} aria-label={`info about ${item.title}`}>
                                     <AspectRatioIcon />
                                 </IconButton>
                             }

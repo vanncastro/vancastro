@@ -38,7 +38,7 @@ export const Prices = () => {
     ];
 
     return (
-        <Container title="prices" darkTitleColor>
+        <Container title="prices" id="prices" darkTitleColor>
             <StyledDiv>
                 {pricePlans.map(plan => (
                     <StyledPriceCard key={plan.id}>

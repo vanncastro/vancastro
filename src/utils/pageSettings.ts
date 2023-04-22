@@ -1,11 +1,16 @@
 export const pageSettings = {
     website_title: 'VanCastro Driving School',
     logo: 'VanCastro',
-    navMenu: ['About', 'Prices', 'Reviews', 'Contact'],
-    profileClickMenu: ['Schedule', 'Prices', 'About'],
+    navMenu: ['About', 'Prices', 'Schedule', 'Reviews', 'Policies', 'Contact'],
     client_name: 'VanCastro',
     client_location: 'Vancouver',
     company_creation_date: '2002',
+    email_address: 'accastro1307@gmail.com',
+    phone_number: '+1 604-600-9173',
+    unformated_phone_number: '16046009173',
+    whats_app_text: 'Hello, I was browsing vancastro website and would like to know more about your services',
+
+    facebook_link: 'https://www.facebook.com/profile.php?id=100088028419878',
 
     andresa: {
         logo: '/andresa.png',

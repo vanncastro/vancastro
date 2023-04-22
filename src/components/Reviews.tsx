@@ -9,7 +9,6 @@ import { Autoplay, Navigation } from 'swiper';
 import { Container } from './base/Container';
 import { ReviewCard } from './base/ReviewCard';
 import styled from 'styled-components';
-import { Photos } from './base/Photos';
 
 const StyledSwiper = styled.div`
     max-width: 90%;

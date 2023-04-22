@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Link } from 'react-scroll';
 
-export const Landing = ({ handleSelectedPerson }: { handleSelectedPerson: (p: string) => void }) => {
+export const Landing = () => {
     return (
         <StyledWrapper>
             <StyledImage src="/landing.avif" alt="Landing page image" />

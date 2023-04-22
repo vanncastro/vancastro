@@ -8,8 +8,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { Link } from 'react-scroll';
 import dynamic from 'next/dynamic';
-// import { Avatar } from './ProfilePage';
-import { fontFamily } from '../utils/utils';
+import { MobileNavigation } from './base/MobileNavigation';
 import { pageSettings } from '../utils/pageSettings';
 import { Text } from './base/Text';
 
@@ -43,25 +42,18 @@ const StyledLogo = styled.div`
     }
 `;
 
-export const Header = ({
-    selectedPerson,
-    isSelectingDriver,
-}: {
-    selectedPerson: string;
-    isSelectingDriver?: boolean;
-}) => {
-    const hasSelectedDriver = selectedPerson !== '';
-
+export const Header = () => {
     return (
         <StyledAppBar position="static">
-            <Container maxWidth="xl">
+            <MobileNavigation />
+            <Container maxWidth="xl" sx={{ display: { md: 'flex' } }}>
                 <Toolbar disableGutters>
                     <Typography
                         component="a"
                         href="/"
                         sx={{
-                            mr: { xs: hasSelectedDriver ? 1 : 2, lg: 5 },
-                            ml: { xs: hasSelectedDriver ? 0 : 1, lg: 3 },
+                            mr: { xs: 2, lg: 5 },
+                            ml: { xs: 1, lg: 3 },
                             textDecoration: 'none',
                         }}
                     >
@@ -76,37 +68,20 @@ export const Header = ({
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'space-around', overflow: 'scroll' }}>
-                        {pageSettings.navMenu.map(page =>
-                            !hasSelectedDriver ? (
-                                <Link key={page} to={page.toLowerCase()} spy smooth>
-                                    <Button
-                                        sx={{
-                                            my: { lg: 3, xs: '0' },
-                                            mr: { lg: 3, xs: '-10px' },
-                                            color: 'var(--white)',
-                                            display: 'block',
-                                            margin: { lg: '20px', xs: '-10px' },
-                                            fontFamily,
-                                        }}
-                                    >
-                                        {page}
-                                    </Button>
-                                </Link>
-                            ) : (
+                        {pageSettings.navMenu.map(page => (
+                            <Link key={page} to={page.toLowerCase()} spy smooth>
                                 <Button
-                                    key={page}
-                                    href={`/#${page.toLowerCase()}`}
                                     sx={{
-                                        my: 3,
                                         color: 'var(--white)',
                                         display: 'block',
-                                        fontFamily,
+                                        ml: { lg: '50px', md: '20px' },
+                                        fontFamily: 'var(--font-family)',
                                     }}
                                 >
                                     {page}
                                 </Button>
-                            )
-                        )}
+                            </Link>
+                        ))}
                     </Box>
                     {/* {hasSelectedDriver && <Avatar selectedPerson={selectedPerson} />} */}
                 </Toolbar>

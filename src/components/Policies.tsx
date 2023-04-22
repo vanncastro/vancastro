@@ -10,7 +10,14 @@ import { pageSettings } from 'src/utils/pageSettings';
 
 export const Policies = () => {
     return (
-        <Container darkTitleColor hasLightBackground title="Our Policies" height={'100%'} paddingBottom="200px">
+        <Container
+            darkTitleColor
+            hasLightBackground
+            title="Our Policies"
+            height={'100%'}
+            paddingBottom="100px"
+            id="policies"
+        >
             <StyledContainer>
                 {pageSettings.policies.map((policy, index) => {
                     return (

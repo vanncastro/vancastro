@@ -29,7 +29,14 @@ export const ScrollTop = () => {
             <Box
                 onClick={handleClick}
                 role="presentation"
-                sx={{ position: 'fixed', bottom: 40, right: '50%', zIndex: 99999 }}
+                sx={{
+                    position: 'fixed',
+                    bottom: 100,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    width: '100%',
+                    zIndex: 99999,
+                }}
             >
                 <Fab
                     size="large"
