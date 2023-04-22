@@ -81,12 +81,10 @@ export const DriverAbout = ({ selectedDriver }: { selectedDriver: string }) => {
                 <StyledContentContainer>
                     <StyledTextContainer>
                         <Text color={COLORS.primary} type="header" textAlign="center">
-                            Hi, Im {pageSettings[selectedDriver].display_name}!
+                            Hello, I am {pageSettings[selectedDriver].display_name}!
                         </Text>
                         <Text color={COLORS.primary} type="body" margin={'60px 30px 20px 50px'}>
-                            I have over 10 years of experience in web development and have worked with a wide range of
-                            clients across different industries. I have a passion for creating beautiful and functional
-                            websites that exceed my clients expectations.
+                            {pageSettings[selectedDriver].about}
                         </Text>
                     </StyledTextContainer>
                 </StyledContentContainer>

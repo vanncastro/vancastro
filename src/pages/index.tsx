@@ -10,6 +10,7 @@ import { About } from '../components/About';
 import { Photos } from '../components/base/Photos';
 import { Prices } from '../components/Prices';
 import { ScrollTop } from 'src/components/base/ScrollTop';
+import { Policies } from 'src/components/Policies';
 
 export default function Home() {
     const [selectedPerson, setSelectedPerson] = useState('');
@@ -28,6 +29,7 @@ export default function Home() {
             <Drivers />
             <Reviews />
             <Photos />
+            <Policies />
             <Footer />
             <ScrollTop />
         </>

@@ -9,12 +9,10 @@ export const Prices = () => {
     const pricePlans = [
         {
             id: 1,
-            imageSrc: 'https://via.placeholder.com/300x200',
-            title: 'Basic Plan',
-            description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel nunc eu ipsum consectetur tincidunt.',
-            old_price: '$420,00',
-            price: '19.99',
+            title: 'Individual',
+            description: 'includes \n 1 class (90 min)',
+            old_price: '$120,00',
+            price: '90.00',
             icon: <SpaIcon fontSize="inherit" />,
         },
         {
