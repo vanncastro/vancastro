@@ -1,16 +1,16 @@
 export const pageSettings = {
     website_title: 'VanCastro Driving School',
     logo: 'VanCastro',
-    navMenu: ['About', 'Pricing', 'Reviews', 'Contact'],
+    navMenu: ['About', 'Prices', 'Reviews', 'Contact'],
     profileClickMenu: ['Schedule', 'Prices', 'About'],
     client_name: 'VanCastro',
     client_location: 'Vancouver',
     company_creation_date: '2002',
 
-    // andressa: {
-    //     logo: '/andressa.png',
-    //     display_name: 'Andressa',
-    // },
+    andresa: {
+        logo: '/andresa.avif',
+        display_name: 'Andresa',
+    },
 
     anderson: {
         logo: '/anderson.avif',
@@ -22,6 +22,12 @@ export const pageSettings = {
             id: 1,
             name: 'Anderson',
             imageUrl: '/anderson.avif',
+        },
+
+        {
+            id: 2,
+            name: 'Andresa',
+            imageUrl: '/andresa.avif',
         },
     ],
 

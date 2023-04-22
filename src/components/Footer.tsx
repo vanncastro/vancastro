@@ -48,9 +48,9 @@ export const Footer = () => {
     return (
         <FooterWrapper>
             <Container maxWidth="lg">
-                <Typography variant="body2" display={'flex'} justifyContent={'center'} padding={'5px'}>
+                <StyledText textAlign="center">
                     © {year} {pageSettings.client_name}. All rights reserved.
-                </Typography>
+                </StyledText>
                 <SocialIcons>
                     <WhatsApp />
                     <Facebook />

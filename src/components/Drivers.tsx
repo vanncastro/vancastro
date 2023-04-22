@@ -46,10 +46,10 @@ const ActionsWrapper = styled(CardActions)`
 const DriverWrapper = styled(CardActions)`
     display: flex;
     justify-content: center;
-    max-width: 350px;
+    max-width: 700px;
     margin: 0 auto;
 
-    gap: 20px;
+    gap: 40px;
 
     @media (max-width: 800px) {
         display: block;
@@ -61,23 +61,38 @@ const DriverWrapper = styled(CardActions)`
 
 const Driver = ({ agent }) => {
     return (
-        <CardWrapper>
+        <CardWrapper sx={{ fontFamily: 'var(--font-family)' }}>
             <CardMediaWrapper image={agent.imageUrl} title={agent.name} />
             <CardContentWrapper>
-                <Typography variant="h5" gutterBottom>
+                <Typography variant="h5" gutterBottom fontFamily="inherit">
                     {agent.name}
                 </Typography>
-                <Typography variant="body2">
+                <Typography variant="body2" fontFamily="inherit">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor turpis quis erat
                     malesuada, sit amet cursus nunc luctus. Nulla facilisi.
                 </Typography>
             </CardContentWrapper>
             <ActionsWrapper>
-                <Button size="medium" color="primary" href={`/driver/${agent.name.toLowerCase()}#about`}>
-                    Learn More
+                <Button
+                    sx={{
+                        fontFamily: 'var(--font-family)',
+                    }}
+                    size="large"
+                    color="primary"
+                    href={`/driver/${agent.name.toLowerCase()}#about`}
+                >
+                    About
                 </Button>
 
-                <Button size="medium" color="primary" href={`/driver/${agent.name.toLowerCase()}#schedule`}>
+                <Button
+                    sx={{
+                        fontFamily: 'var(--font-family)',
+                        fontWeight: '600',
+                    }}
+                    color="primary"
+                    size="large"
+                    href={`/driver/${agent.name.toLowerCase()}#schedule`}
+                >
                     Schedule
                 </Button>
             </ActionsWrapper>

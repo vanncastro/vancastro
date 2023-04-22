@@ -66,10 +66,10 @@ const StyledDiv = styled.div`
     margin: 0 auto;
 
     @media (max-width: 800px) {
-        margin: 200px auto;
-
+        margin: 150px auto;
         display: block;
-        max-width: 100%;
+
+        width: 100%;
     }
 `;
 

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Container } from './Container';
 import { Text } from './Text';
 import { COLORS } from 'src/utils/utils';
+import { pageSettings } from 'src/utils/pageSettings';
 
 const StyledContainer = styled.section`
     display: flex;
@@ -65,16 +66,22 @@ const StyledTextContainer = styled.div`
 `;
 
 export const DriverAbout = ({ selectedDriver }: { selectedDriver: string }) => {
+    console.log(pageSettings[selectedDriver].display);
     return (
         <Container id="about" title={`About`} darkTitleColor>
             <StyledContainer>
                 <StyledImageContainer>
-                    <StyledImage src="/anderson.avif" alt="Profile Picture" width={300} height={300} />
+                    <StyledImage
+                        src={pageSettings[selectedDriver].logo}
+                        alt="Profile Picture"
+                        width={300}
+                        height={300}
+                    />
                 </StyledImageContainer>
                 <StyledContentContainer>
                     <StyledTextContainer>
                         <Text color={COLORS.primary} type="header" textAlign="center">
-                            Hi, Im Anderson!
+                            Hi, Im {pageSettings[selectedDriver].display_name}!
                         </Text>
                         <Text color={COLORS.primary} type="body" margin={'60px 30px 20px 50px'}>
                             I have over 10 years of experience in web development and have worked with a wide range of

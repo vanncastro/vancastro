@@ -79,7 +79,16 @@ export const Header = ({
                         {pageSettings.navMenu.map(page =>
                             !hasSelectedDriver ? (
                                 <Link key={page} to={page.toLowerCase()} spy smooth>
-                                    <Button sx={{ my: 3, color: 'var(--white)', display: 'block', fontFamily }}>
+                                    <Button
+                                        sx={{
+                                            my: { lg: 3, xs: '0' },
+                                            mr: { lg: 3, xs: '-10px' },
+                                            color: 'var(--white)',
+                                            display: 'block',
+                                            margin: { lg: '20px', xs: '-10px' },
+                                            fontFamily,
+                                        }}
+                                    >
                                         {page}
                                     </Button>
                                 </Link>
@@ -87,14 +96,18 @@ export const Header = ({
                                 <Button
                                     key={page}
                                     href={`/#${page.toLowerCase()}`}
-                                    sx={{ my: 3, color: 'var(--white)', display: 'block', fontFamily }}
+                                    sx={{
+                                        my: 3,
+                                        color: 'var(--white)',
+                                        display: 'block',
+                                        fontFamily,
+                                    }}
                                 >
                                     {page}
                                 </Button>
                             )
                         )}
                     </Box>
-
                     {/* {hasSelectedDriver && <Avatar selectedPerson={selectedPerson} />} */}
                 </Toolbar>
             </Container>

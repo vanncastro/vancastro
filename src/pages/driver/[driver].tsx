@@ -7,7 +7,6 @@ import { DriverAbout } from '../../components/base/DriverAbout';
 import { Footer } from 'src/components/Footer';
 import { CircularIndeterminate } from '../../components/base/Loading';
 import styled from 'styled-components';
-import { Text } from '../../components/base/Text';
 
 const StyledDiv = styled.div`
     height: 100vh;

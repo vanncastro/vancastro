@@ -59,13 +59,13 @@ const IconWrapper = styled.div`
 
 const AboutCard = ({ title, icon, description }) => {
     return (
-        <CardWrapper>
+        <CardWrapper sx={{ fontFamily: 'var(--font-family)' }}>
             <CardContentWrapper>
                 <IconWrapper>{icon}</IconWrapper>
-                <Typography variant="h4" gutterBottom>
+                <Typography variant="h4" gutterBottom fontFamily="inherit">
                     {title}
                 </Typography>
-                <Typography variant="body1" marginTop="30px">
+                <Typography variant="body1" marginTop="30px" fontFamily="inherit">
                     {description}
                 </Typography>
             </CardContentWrapper>
