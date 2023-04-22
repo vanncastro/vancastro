@@ -52,7 +52,7 @@ const DriverWrapper = styled(CardActions)`
 
     @media (max-width: 800px) {
         flex-direction: column;
-        gap: 0px;
+        gap: 2px;
     }
 `;
 
@@ -73,6 +73,13 @@ const Driver = ({ agent }) => {
                 <Button
                     sx={{
                         fontFamily: 'var(--font-family)',
+                        color: 'var(--primary)',
+                        border: '1px solid var(--primary)',
+                        height: '30px',
+                        margin: '0 15px 20px',
+                        ':hover': {
+                            backgroundColor: 'var(--background)',
+                        },
                     }}
                     size="large"
                     color="primary"
@@ -85,6 +92,13 @@ const Driver = ({ agent }) => {
                     sx={{
                         fontFamily: 'var(--font-family)',
                         fontWeight: '600',
+                        color: 'var(--primary)',
+                        border: '1px solid var(--primary)',
+                        height: '30px',
+                        margin: '0 0 20px',
+                        ':hover': {
+                            backgroundColor: 'var(--background)',
+                        },
                     }}
                     color="primary"
                     size="large"
