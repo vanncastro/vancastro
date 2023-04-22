@@ -65,9 +65,7 @@ const StyledDiv = styled.div`
 
     @media (max-width: 800px) {
         margin: 150px auto;
-        display: block;
-
-        width: 100%;
+        flex-direction: column;
     }
 `;
 
@@ -89,6 +87,7 @@ const StyledPriceCard = styled.div`
     @media (max-width: 768px) {
         min-width: 259px;
         max-width: 260px;
+        margin: 0 auto 20px;
     }
 `;
 

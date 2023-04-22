@@ -20,7 +20,6 @@ const CardWrapper = styled(Card)`
 
     @media (max-width: 800px) {
         margin-top: 20px;
-
         :not(:first-child) {
             margin-left: 0px;
         }
@@ -52,10 +51,8 @@ const DriverWrapper = styled(CardActions)`
     gap: 40px;
 
     @media (max-width: 800px) {
-        display: block;
-        margin: 0 auto;
-        justify-content: center;
-        max-width: 70%;
+        flex-direction: column;
+        gap: 0px;
     }
 `;
 
