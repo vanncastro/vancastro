@@ -35,7 +35,7 @@ export const ReviewCard = () => {
     const { name, avatar, rating, text, source, url } = review;
 
     return (
-        <StyledCard id="reviews">
+        <StyledCard>
             <CardHeader
                 avatar={<StyledAvatar aria-label={name} src={avatar} />}
                 title={name}

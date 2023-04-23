@@ -37,7 +37,7 @@ export const Reviews = () => {
     }, []);
 
     return (
-        <Container title="Our Reviews" darkTitleColor height="100%" paddingBottom="50px">
+        <Container title="Our Reviews" darkTitleColor height="100%" paddingBottom="50px" id="reviews">
             <StyledSwiper>
                 <Swiper
                     slidesPerView={slidesPerView}
