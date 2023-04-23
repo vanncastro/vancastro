@@ -157,17 +157,17 @@ export const pageSettings = {
     service_area: [
         {
             title: 'Vancouver',
-            address: ['999 Kingsway (Kingsway)', '4126 Macdonald Street (Point Grey)'],
+            address: ['999 Kingsway', '4126 Macdonald Street'],
         },
 
         {
             title: 'Burnaby',
-            address: ['4399 Wayburne Drive (Wayburne)', '3880 Lougheed Highway (Lougheed)'],
+            address: ['4399 Wayburne Drive', '3880 Lougheed Highway'],
         },
 
         {
             title: 'North Vancouver',
-            address: ['1331 Marine Drive (Marine Drine)'],
+            address: ['1331 Marine Drive'],
         },
     ],
 };
