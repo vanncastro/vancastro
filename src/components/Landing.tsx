@@ -6,7 +6,7 @@ import { Link } from 'react-scroll';
 export const Landing = () => {
     return (
         <StyledWrapper>
-            <StyledImage src="/landing.avif" alt="Landing page image" />
+            <StyledImage src="/landing.png" alt="Landing page image" />
             <Link to="schedule" spy smooth>
                 <StyledButton>Schedule</StyledButton>
             </Link>
@@ -17,7 +17,7 @@ export const Landing = () => {
 const StyledWrapper = styled.div`
     position: relative;
     margin: 0 auto;
-    max-width: 1550px;
+    max-width: 1500px;
 `;
 
 const StyledImage = styled.img`
@@ -25,11 +25,12 @@ const StyledImage = styled.img`
     width: 100%;
     border-radius: 15px;
     object-fit: cover;
-    margin-top: 5em;
+    margin-top: 3em;
 
     @media (max-width: 768px) {
         height: 700px;
         object-fit: cover;
+        margin-top: 5em;
     }
 `;
 

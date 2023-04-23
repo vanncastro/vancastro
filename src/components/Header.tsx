@@ -6,11 +6,14 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import { Link } from 'react-scroll';
+import { Link as ReactScroll } from 'react-scroll';
+import Link from 'next/link';
+
 import dynamic from 'next/dynamic';
 import { MobileNavigation } from './base/MobileNavigation';
 import { pageSettings } from '../utils/pageSettings';
 import { Text } from './base/Text';
+import { FaPlayCircle } from 'react-icons/fa';
 
 const Appbar = dynamic(() => import('@mui/material/AppBar'), {
     ssr: false,
@@ -18,7 +21,7 @@ const Appbar = dynamic(() => import('@mui/material/AppBar'), {
 
 const StyledAppBar = styled(Appbar)`
     border-radius: 15px;
-    max-width: 1700px;
+    max-width: 1500px;
     margin: 0 auto;
     align-items: center;
     background-color: var(--primary) !important;
@@ -43,20 +46,39 @@ const StyledLogo = styled.div`
 `;
 
 const pageIteration = page => {
-    return page.map(pg => (
-        <Link key={pg} to={pg.toLowerCase()} spy smooth>
-            <Button
-                sx={{
-                    color: 'var(--white)',
-                    display: 'block',
-                    ml: { lg: '50px', md: '20px' },
-                    fontFamily: 'var(--font-family)',
-                }}
-            >
-                {pg}
-            </Button>
-        </Link>
-    ));
+    return page.map(pg => {
+        if (pg === 'Home') {
+            return (
+                <Link href="/" key={pg} style={{ textDecoration: 'none' }}>
+                    <Button
+                        sx={{
+                            color: 'var(--white)',
+                            display: 'block',
+                            ml: { lg: '50px', md: '20px' },
+                            fontFamily: 'var(--font-family)',
+                        }}
+                    >
+                        {pg}
+                    </Button>
+                </Link>
+            );
+        } else {
+            return (
+                <ReactScroll key={pg} to={pg.toLowerCase()} spy smooth>
+                    <Button
+                        sx={{
+                            color: 'var(--white)',
+                            display: 'block',
+                            ml: { lg: '50px', md: '20px' },
+                            fontFamily: 'var(--font-family)',
+                        }}
+                    >
+                        {pg}
+                    </Button>
+                </ReactScroll>
+            );
+        }
+    });
 };
 
 export const Header = ({ driverPage }: { driverPage: boolean }) => {

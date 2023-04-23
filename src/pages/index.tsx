@@ -8,7 +8,7 @@ import { Drivers } from '../components/Drivers';
 import { Footer } from '../components/Footer';
 import { About } from '../components/About';
 import { Photos } from '../components/base/Photos';
-import { Prices } from '../components/Prices';
+import { Plans } from '../components/Plans';
 import { ScrollTop } from 'src/components/base/ScrollTop';
 import { Policies } from 'src/components/Policies';
 import { Contact } from 'src/components/Contact';
@@ -20,7 +20,7 @@ export default function Home() {
             <Header driverPage={false} />
             <Landing />
             <About />
-            <Prices />
+            <Plans />
             <Drivers />
             <Reviews />
             <Photos />

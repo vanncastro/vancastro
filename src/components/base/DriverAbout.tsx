@@ -93,7 +93,6 @@ const StyledParagraph = styled.p`
 `;
 
 export const DriverAbout = ({ selectedDriver }: { selectedDriver: string }) => {
-    console.log(pageSettings[selectedDriver].display);
     return (
         <Container id="about" title={`About`} darkTitleColor height={'100%'}>
             <StyledContainer>

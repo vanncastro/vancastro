@@ -24,28 +24,40 @@ const StyledLogo = styled.div<{ margin?: string }>`
     margin: ${props => props.margin || '0'};
 `;
 
-const StyledText = styled.p`
-    font-size: 28px;
-    display: block;
-    font-weight: 700;
-    text-transform: capitalize;
-`;
-
 const pageIteration = pg => {
-    return pg.map(item => (
-        <ReactScroll key={item} to={item.toLowerCase()} spy smooth>
-            <Button
-                sx={{
-                    color: 'var(--white)',
-                    display: 'block',
-                    margin: '10px auto',
-                    fontFamily: 'var(--font-family)',
-                }}
-            >
-                {item}
-            </Button>
-        </ReactScroll>
-    ));
+    return pg.map(item => {
+        if (item === 'Home') {
+            return (
+                <Link href="/" key={item} style={{ textDecoration: 'none' }}>
+                    <Button
+                        sx={{
+                            color: 'var(--white)',
+                            display: 'block',
+                            margin: '10px auto',
+                            fontFamily: 'var(--font-family)',
+                        }}
+                    >
+                        {item}
+                    </Button>
+                </Link>
+            );
+        }
+
+        return (
+            <ReactScroll key={item} to={item.toLowerCase() === 'home' ? '/about' : item.toLowerCase()} spy smooth>
+                <Button
+                    sx={{
+                        color: 'var(--white)',
+                        display: 'block',
+                        margin: '10px auto',
+                        fontFamily: 'var(--font-family)',
+                    }}
+                >
+                    {item}
+                </Button>
+            </ReactScroll>
+        );
+    });
 };
 
 export const MobileNavigation = ({ driverPage }: { driverPage: boolean }) => {

@@ -93,7 +93,7 @@ const StyledLi = styled.li`
 
 export const Contact = () => {
     return (
-        <Container paddingBottom="50px" title="Contact Us!" darkTitleColor height={'100%'}>
+        <Container paddingBottom="50px" title="Contact Us!" darkTitleColor height={'100%'} id="contact">
             <StyledSubTitle>Email Address</StyledSubTitle>
             <a target="_blank" href={`mailto: ${pageSettings.email_address}`} style={{ textDecoration: 'none' }}>
                 <StyledText cursorPointer>{pageSettings.email_address}</StyledText>

@@ -1,8 +1,8 @@
 export const pageSettings = {
     website_title: 'VanCastro Driving School',
     logo: 'VanCastro',
-    navMenu: ['About', 'Prices', 'Schedule', 'Reviews', 'Policies', 'Contact'],
-    driverNav: ['About', 'Schedule'],
+    navMenu: ['About', 'Plans', 'Schedule', 'Reviews', 'Policies', 'Contact'],
+    driverNav: ['Home', 'About', 'Schedule'],
     client_name: 'VanCastro',
     client_location: 'Vancouver',
     company_creation_date: '2002',
