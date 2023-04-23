@@ -31,14 +31,14 @@ export const pageSettings = {
         {
             id: 1,
             name: 'Anderson',
-            about: 'Anderson, our driving instructor, has over 25 years of experience driving around the world. His passion for cars and safety inspired him to create VanCastro Driving School. He specializes in helping nervous students and can teach in both Portuguese and English.',
+            about: 'Anderson has over 25 years of experience driving around the world. His passion for cars and safety inspired him to create VanCastro Driving School. He specializes in helping nervous students and can teach in both Portuguese and English.',
             imageUrl: '/anderson.png',
         },
 
         {
             id: 2,
             name: 'Andresa',
-            about: 'Andresa is a licensed driving instructor with over 25 years of experience. She prioritizes safety and offers comprehensive learning with flexible scheduling options.',
+            about: 'Andresa is a licensed driving instructor with over 25 years of experience driving around the world. She prioritizes safety and offers comprehensive learning with flexible scheduling options and can teach in both Portuguese and English.',
             imageUrl: '/andresa.png',
         },
     ],
