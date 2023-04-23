@@ -14,7 +14,6 @@ const StyledDiv = styled.div`
 `;
 
 export const Schedule = ({ selectedDriver }: { selectedDriver: string }) => {
-    console.log(selectedDriver);
     return (
         <Container title="Schedule" id="schedule" hasLightBackground height={'140vh'} darkTitleColor>
             <StyledDiv>

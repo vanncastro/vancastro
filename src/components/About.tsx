@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { School, ThumbUp, Build } from '@mui/icons-material';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import { TbLicense } from 'react-icons/tb';
+import { BsPatchQuestion } from 'react-icons/bs';
+import { FaCarAlt } from 'react-icons/fa';
 
 import { Container } from '../components/base/Container';
 import { pageSettings } from 'src/utils/pageSettings';
@@ -11,18 +13,18 @@ import { pageSettings } from 'src/utils/pageSettings';
 const about = [
     {
         title: pageSettings.about.card1.title,
-        icon: <School fontSize="inherit" sx={{ color: 'var(--primary)' }} />,
+        icon: <TbLicense fontSize="inherit" style={{ color: 'var(--primary' }} />,
         description: pageSettings.about.card1.description,
     },
     {
-        title: pageSettings.about.card1.title,
-        icon: <ThumbUp fontSize="inherit" sx={{ color: 'var(--primary)' }} />,
-        description: pageSettings.about.card1.description,
+        title: pageSettings.about.card2.title,
+        icon: <BsPatchQuestion fontSize="inherit" style={{ color: 'var(--primary' }} />,
+        description: pageSettings.about.card2.description,
     },
     {
-        title: pageSettings.about.card1.title,
-        icon: <Build fontSize="inherit" sx={{ color: 'var(--primary)' }} />,
-        description: pageSettings.about.card1.description,
+        title: pageSettings.about.card3.title,
+        icon: <FaCarAlt fontSize="inherit" style={{ color: 'var(--primary' }} />,
+        description: pageSettings.about.card3.description,
     },
 ];
 
@@ -62,10 +64,18 @@ const AboutCard = ({ title, icon, description }) => {
         <CardWrapper sx={{ fontFamily: 'var(--font-family)' }}>
             <CardContentWrapper>
                 <IconWrapper>{icon}</IconWrapper>
-                <Typography variant="h5" gutterBottom fontFamily="inherit" color="var(--primary)">
+                <Typography variant="h5" gutterBottom fontFamily="inherit" color="var(--primary)" fontWeight={'600'}>
                     {title}
                 </Typography>
-                <Typography variant="body1" marginTop="30px" fontFamily="inherit" color="var(--primary)">
+                <Typography
+                    variant="body1"
+                    marginTop="30px"
+                    fontFamily="inherit"
+                    color="var(--primary)"
+                    textAlign="justify"
+                    margin="20px 10px 0 10px"
+                    sx={{ minHeight: '170px', maxHeight: '180px' }}
+                >
                     {description}
                 </Typography>
             </CardContentWrapper>

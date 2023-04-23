@@ -31,31 +31,33 @@ export const pageSettings = {
         {
             id: 1,
             name: 'Anderson',
+            about: 'Anderson, our driving instructor, has over 25 years of experience driving around the world. His passion for cars and safety inspired him to create VanCastro Driving School. He specializes in helping nervous students and can teach in both Portuguese and English.',
             imageUrl: '/anderson.png',
         },
 
         {
             id: 2,
             name: 'Andresa',
+            about: 'Andresa is a licensed driving instructor with over 25 years of experience. She prioritizes safety and offers comprehensive learning with flexible scheduling options.',
             imageUrl: '/andresa.png',
         },
     ],
 
     about: {
         card1: {
-            title: 'Licensed Instructor',
+            title: 'Licensed Instructors',
             description:
-                'All our instructors are licensed and certified professionals with years of experience in their fields.',
+                'Our Instructors are skilled and experienced professionals dedicated to providing patient and supportive training, ensuring that all students leave our driving school with the skills and confidence needed to navigate the roads safely.',
         },
         card2: {
             title: 'Why Us',
             description:
-                'We provide a fun and engaging learning environment, with flexible schedules and personalized attention.',
+                'We prioritize your safety and provide a comprehensive learning experience with knowledgeable instructors, modern training vehicles, and flexible scheduling options.',
         },
         card3: {
             title: 'What We Teach',
             description:
-                'We offer a wide range of courses, from beginner to advanced levels, in various subjects including web development, data science, and design.',
+                'We provide comprehensive courses that cover everything from basic driving skills to defensive driving techniques. Our curriculum is designed to prepare students to become safe and responsible drivers on the road.',
         },
     },
 
@@ -149,6 +151,23 @@ export const pageSettings = {
                 'In the event of local/community outbreaks Vancastro driving school reserves the right to cancel/postpone lessons which will be rescheduled for a later date. ',
             ],
             note: null,
+        },
+    ],
+
+    service_area: [
+        {
+            title: 'Vancouver',
+            address: ['999 Kingsway (Kingsway)', '4126 Macdonald Street (Point Grey)'],
+        },
+
+        {
+            title: 'Burnaby',
+            address: ['4399 Wayburne Drive (Wayburne)', '3880 Lougheed Highway (Lougheed)'],
+        },
+
+        {
+            title: 'North Vancouver',
+            address: ['1331 Marine Drive (Marine Drine)'],
         },
     ],
 };

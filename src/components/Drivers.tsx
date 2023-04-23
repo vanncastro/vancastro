@@ -65,8 +65,7 @@ const Driver = ({ agent }) => {
                     {agent.name}
                 </Typography>
                 <Typography variant="body2" fontFamily="inherit">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor turpis quis erat
-                    malesuada, sit amet cursus nunc luctus. Nulla facilisi.
+                    {agent.about}
                 </Typography>
             </CardContentWrapper>
             <ActionsWrapper>
