@@ -13,7 +13,7 @@ export const Plans = () => {
     const pricePlans = [
         {
             id: 1,
-            title: 'Individual',
+            title: 'Plan 1',
             description: 'includes 1 class (90 min)',
             old_price: null,
             price: '90.00',
@@ -21,7 +21,7 @@ export const Plans = () => {
         },
         {
             id: 2,
-            title: 'Basic 1',
+            title: 'Plan 2',
             description: 'includes 2 classes (90 min each)',
             price: '170.00',
             old_price: null,
@@ -29,7 +29,7 @@ export const Plans = () => {
         },
         {
             id: 3,
-            title: 'Basic 2',
+            title: 'Plan 3',
             description: 'includes 3 classes (90 min each)',
             price: '240.00',
             old_price: null,
