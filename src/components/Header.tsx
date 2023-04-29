@@ -13,7 +13,6 @@ import dynamic from 'next/dynamic';
 import { MobileNavigation } from './base/MobileNavigation';
 import { pageSettings } from '../utils/pageSettings';
 import { Text } from './base/Text';
-import { FaPlayCircle } from 'react-icons/fa';
 
 const Appbar = dynamic(() => import('@mui/material/AppBar'), {
     ssr: false,
