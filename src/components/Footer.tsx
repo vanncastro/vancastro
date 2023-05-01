@@ -40,11 +40,7 @@ export const Footer = () => {
                         {' '}
                         Gabriel Barreto
                     </a>{' '}
-                    &
-                    <a style={{ textDecoration: 'none' }} target="_blank" href={'https://www.github.com/ghbarreto'}>
-                        {' '}
-                        Thaís Carmo
-                    </a>{' '}
+                    &<a style={{ textDecoration: 'none' }}> Thaís Carmo</a>{' '}
                 </StyledText>
             </Container>
         </FooterWrapper>
