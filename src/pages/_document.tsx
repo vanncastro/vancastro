@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
             return {
                 ...initialProps,
                 styles: (
-                    <Fragment key="23">
+                    <Fragment key="2398172397">
                         {initialProps.styles}
                         {sheet.getStyleElement()}
                     </Fragment>
