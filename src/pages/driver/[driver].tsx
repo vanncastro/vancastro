@@ -26,7 +26,7 @@ export default function Drivers() {
     const { query, isReady } = useRouter();
 
     const selectedDriver = pageSettings[String(query['driver'])] ? String(query['driver']) : '';
-    const driverExists = isReady && Boolean(pageSettings[String(query['driver'])]);
+    const driverExists = isReady && pageSettings.current_drivers.includes(selectedDriver.toLowerCase());
 
     return (
         <>

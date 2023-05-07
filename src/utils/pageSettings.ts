@@ -10,6 +10,7 @@ export const pageSettings = {
     phone_number: '+1 604-600-9173',
     unformated_phone_number: '16046009173',
     whats_app_text: 'Hello, I was browsing vancastro website and would like to know more about your services',
+    current_drivers: ['andresa', 'anderson'],
 
     facebook_link: 'https://www.facebook.com/profile.php?id=100088028419878',
 
