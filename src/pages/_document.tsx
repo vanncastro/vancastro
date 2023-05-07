@@ -4,6 +4,12 @@ import Document, { Head, Html, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 import { pageSettings } from 'src/utils/pageSettings';
+import styled from 'styled-components';
+
+const Body = styled.body`
+    padding: 0;
+    margin: 0 auto;
+`;
 
 export default class MyDocument extends Document {
     static async getInitialProps(ctx) {
@@ -45,18 +51,13 @@ export default class MyDocument extends Document {
                 <link
                     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
                     rel="stylesheet"
-                ></link>
+                />
 
                 <Head />
-                <body
-                    style={{
-                        padding: '0',
-                        margin: '0 auto',
-                    }}
-                >
+                <Body>
                     <Main />
                     <NextScript />
-                </body>
+                </Body>
             </Html>
         );
     }
