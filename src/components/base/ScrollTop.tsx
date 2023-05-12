@@ -35,7 +35,7 @@ export const ScrollTop = () => {
                     display: 'flex',
                     justifyContent: 'center',
                     width: '100%',
-                    zIndex: 99999,
+                    zIndex: 9,
                 }}
             >
                 <Fab
