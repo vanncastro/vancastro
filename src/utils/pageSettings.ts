@@ -17,7 +17,7 @@ export const pageSettings = {
     andresa: {
         logo: '/andresa.png',
         display_name: 'Andresa',
-        calendly: 'https://calendly.com/s/30min',
+        calendly: 'https://calendly.com',
         about: 'With experience in training in Brazil and Canada, Andresa started out taking care of the administrative side of VanCastro and over time began to admire how happy and fulfilled Anderson had become with the birth and growth of VanCastro. In a short time, she decided to study to also acquire her license to also become an Instructor Driver. Andresa also has over 25 years driving experience. If you have a challenge, Andresa is the woman to call.',
     },
 
