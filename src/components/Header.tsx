@@ -46,7 +46,7 @@ const StyledLogo = styled.div`
 
 const pageIteration = page => {
     return page.map(pg => {
-        if (pg === 'Home') {
+        if (pg.toLowerCase() === 'home') {
             return (
                 <Link href="/" key={pg} style={{ textDecoration: 'none' }}>
                     <Button
