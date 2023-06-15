@@ -25,7 +25,7 @@ const StyledAvatar = styled(Avatar)`
 const review = {
     name: 'John Doe',
     avatar: 'https://picsum.photos/id/1011/60/60',
-    rating: 4.5,
+    rating: 4.7,
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
     source: 'Google',
     url: 'https://www.google.com/',
