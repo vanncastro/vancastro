@@ -13,6 +13,7 @@ export const pageSettings = {
     current_drivers: ['andresa', 'anderson'],
 
     facebook_link: 'https://www.facebook.com/profile.php?id=100088028419878',
+    instagram_link: 'https://www.instagram.com/vancastro_drivingschool/',
 
     andresa: {
         logo: '/andresa.png',

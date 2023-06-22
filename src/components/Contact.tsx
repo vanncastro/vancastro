@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from './base/Container';
 import styled from 'styled-components';
-import { WhatsApp, Facebook } from '@mui/icons-material';
+import { WhatsApp, Facebook, Instagram } from '@mui/icons-material';
 import { pageSettings } from 'src/utils/pageSettings';
 
 const StyledSubTitle = styled.h2<{ margin?: string }>`
@@ -126,6 +126,9 @@ export const Contact = () => {
                 </a>
                 <a target="_blank" style={{ textDecoration: 'none' }} href={pageSettings.facebook_link}>
                     <Facebook />
+                </a>
+                <a target="_blank" style={{ textDecoration: 'none' }} href={pageSettings.instagram_link}>
+                    <Instagram />
                 </a>
             </SocialIcons>
         </Container>
