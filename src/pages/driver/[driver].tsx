@@ -5,6 +5,7 @@ import { pageSettings } from '../../utils/pageSettings';
 import { Schedule } from '../../components/base/Schedule';
 import { DriverAbout } from '../../components/base/DriverAbout';
 import { Footer } from 'src/components/Footer';
+import { Contact } from 'src/components/Contact';
 import { CircularIndeterminate } from '../../components/base/Loading';
 import styled from 'styled-components';
 
@@ -43,6 +44,7 @@ export default function Drivers() {
                     <StyledText>no driver found</StyledText>
                 </StyledDiv>
             )}
+            <Contact />
             <Footer />
         </>
     );
