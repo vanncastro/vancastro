@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { useEffect } from 'react';
 
 import ImageList from '@mui/material/ImageList';
@@ -14,6 +13,22 @@ import { Container } from './Container';
 const StyledImage = styled.img`
     height: 200px;
     object-fit: cover;
+`;
+
+const StyledImageList = styled(ImageList)`
+    .react-simple-image-viewer {
+        &__next,
+        &__previous {
+            color: var(--background);
+            opacity: 0.8;
+            height: max-content;
+        }
+        &__close {
+            color: var(--background);
+            opacity: 0.8;
+            margin-top: 40px;
+        }
+    }
 `;
 
 const itemData = [
@@ -101,6 +116,14 @@ export const Photos = () => {
         };
     }, []);
 
+    useEffect(() => {
+        if (isViewerOpen) {
+            document.documentElement.style.overflowY = 'hidden';
+        } else {
+            document.documentElement.style.overflowY = '';
+        }
+    }, [isViewerOpen]);
+
     const openImageViewer = useCallback(index => {
         setCurrentImage(index);
         setIsViewerOpen(true);
@@ -113,7 +136,7 @@ export const Photos = () => {
 
     return (
         <Container height={'100%'}>
-            <ImageList
+            <StyledImageList
                 sx={{
                     margin: '0 auto',
                     maxWidth: { lg: '90%', xl: '90%' },
@@ -122,7 +145,7 @@ export const Photos = () => {
                 rowHeight={200}
             >
                 {itemData.map((item, index) => (
-                    <ImageListItem key={index}>
+                    <ImageListItem key={index} onClick={() => openImageViewer(index)}>
                         <StyledImage src={item.img} srcSet={item.img} alt={item.title} loading="lazy" />
                         <ImageListItemBar
                             title={item.title}
@@ -139,14 +162,15 @@ export const Photos = () => {
 
                 {isViewerOpen && (
                     <ImageViewer
+                        backgroundStyle={{ backgroundColor: 'rgba(0,0,0,0.7)' }}
                         src={images}
                         currentIndex={currentImage}
-                        disableScroll={false}
+                        disableScroll
                         closeOnClickOutside={true}
                         onClose={closeImageViewer}
                     />
                 )}
-            </ImageList>
+            </StyledImageList>
         </Container>
     );
 };

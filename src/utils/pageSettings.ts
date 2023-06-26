@@ -2,7 +2,7 @@ export const pageSettings = {
     website_title: 'VanCastro Driving School',
     logo: 'VanCastro',
     navMenu: ['About', 'Plans', 'Schedule', 'Reviews', 'Policies', 'Contact'],
-    driverNav: ['Home', 'About', 'Schedule'],
+    driverNav: ['Home', 'About', 'Schedule', 'Contact'],
     client_name: 'VanCastro',
     client_location: 'Vancouver',
     company_creation_date: '2002',
@@ -157,6 +157,7 @@ export const pageSettings = {
     ],
 
     service_area: [
+        // edit on click redirect to google maps
         {
             title: 'Vancouver',
             address: ['999 Kingsway', '4126 Macdonald Street'],

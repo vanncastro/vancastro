@@ -45,6 +45,7 @@ export const ScrollTop = () => {
                         backgroundColor: 'var(--primary)',
                         color: 'var(--white)',
                         ':hover': { color: 'var(--primary)' },
+                        display: { xs: 'none', sm: 'none', md: 'flex' },
                     }}
                 >
                     <KeyboardArrowUpIcon fontSize={'large'} />

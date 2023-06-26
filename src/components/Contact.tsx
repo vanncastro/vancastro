@@ -30,6 +30,7 @@ const StyledText = styled.p<{ cursorPointer?: boolean }>`
 
     :hover {
         ${({ cursorPointer }) => cursorPointer && 'cursor: pointer;'}
+        font-weight: 600;
     }
 
     @media (max-width: 768px) {
@@ -41,7 +42,6 @@ const SocialIcons = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -40px;
 
     & > *,
     svg {
@@ -49,10 +49,18 @@ const SocialIcons = styled.div`
         font-size: 5rem;
         cursor: pointer;
         transition: transform 0.2s;
-        padding: 50px 15px;
+        padding: 20px 15px;
 
         &:hover {
             transform: scale(1.2);
+        }
+    }
+
+    @media (max-width: 768px) {
+        & > *,
+        svg {
+            font-size: 3rem;
+            padding: 10px 10px;
         }
     }
 `;
@@ -86,6 +94,10 @@ const StyledLi = styled.li`
     padding: 0;
     margin: 0;
 
+    &:hover {
+        font-weight: 600;
+    }
+
     @media (max-width: 768px) {
         font-size: 15px;
     }
@@ -100,8 +112,13 @@ export const Contact = () => {
             </a>
 
             <StyledSubTitle>Phone Number</StyledSubTitle>
-            <StyledText>{pageSettings.phone_number}</StyledText>
-
+            <a
+                target="_blank"
+                style={{ textDecoration: 'none' }}
+                href={`//api.whatsapp.com/send?phone=${pageSettings.unformated_phone_number}&text=${pageSettings.whats_app_text}`}
+            >
+                <StyledText>{pageSettings.phone_number}</StyledText>
+            </a>
             <StyledSubTitle margin={'0 0 -40px'}>Service Area</StyledSubTitle>
 
             {pageSettings.service_area.map((area, index) => {
@@ -110,7 +127,18 @@ export const Contact = () => {
                         <StyledServiceTitle>{area.title}</StyledServiceTitle>
 
                         {area.address.map(e => {
-                            return <StyledLi key={e}>{e}</StyledLi>;
+                            return (
+                                <a
+                                    style={{
+                                        textDecoration: 'none',
+                                    }}
+                                    key={e}
+                                    target="_blank"
+                                    href="https://www.google.com/maps/place/1331+Marine+Dr,+West+Vancouver,+BC+V7T+1B6/@49.3232847,-123.1140639,17z/data=!3m1!4b1!4m6!3m5!1s0x54866e1997145957:0x1f2c5fa6675b1429!8m2!3d49.3232812!4d-123.111489!16s%2Fg%2F11c2bhvpvj?entry=ttu"
+                                >
+                                    <StyledLi>{e}</StyledLi>
+                                </a>
+                            );
                         })}
                     </StyledContainer>
                 );
