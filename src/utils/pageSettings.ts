@@ -160,17 +160,45 @@ export const pageSettings = {
         // edit on click redirect to google maps
         {
             title: 'Vancouver',
-            address: ['999 Kingsway', '4126 Macdonald Street'],
+            address: [
+                {
+                    label: '999 Kingsway',
+                    google_maps_location:
+                        'https://www.google.com/maps/place/999+Kingsway,+Vancouver,+BC+V5V+4Z7,+Canada/data=!4m2!3m1!1s0x54867155d0864fa9:0x94128cfb86a5c888?sa=X&ved=2ahUKEwjahLy1iOT_AhXqCLkGHY2jCEcQ8gF6BAgTEAA&ved=2ahUKEwjahLy1iOT_AhXqCLkGHY2jCEcQ8gF6BAgWEAI',
+                },
+                {
+                    label: '4126 Macdonald Street',
+                    google_maps_location:
+                        'https://www.google.com/maps/place/4126+Macdonald+St,+Vancouver,+BC+V6L+2P2,+Canada/@49.249795,-123.1701097,17z/data=!3m1!4b1!4m6!3m5!1s0x5486730bcae23bd9:0x752cb56ca89919cc!8m2!3d49.2497915!4d-123.1675348!16s%2Fg%2F11bw3zqn2p?entry=ttu',
+                },
+            ],
         },
 
         {
             title: 'Burnaby',
-            address: ['4399 Wayburne Drive', '3880 Lougheed Highway'],
+            address: [
+                {
+                    label: '4399 Wayburne Drive',
+                    google_maps_location:
+                        'https://www.google.com/maps/place/ICBC+Claim+Centre/@49.2445556,-122.9989364,15z/data=!4m6!3m5!1s0x5486771e5fd6686b:0x4c601d8e7748e1d9!8m2!3d49.2445556!4d-122.9989364!16s%2Fg%2F1v8k_95j?entry=ttu',
+                },
+                {
+                    label: '3880 Lougheed Highway',
+                    google_maps_location:
+                        'https://www.google.com/maps/place/ICBC+Driver+Licensing/@49.2652346,-123.0184534,15z/data=!4m2!3m1!1s0x0:0xea6a15aa6a684162?sa=X&ved=2ahUKEwiHhKecieT_AhW5LbkGHaMID_IQ_BJ6BAhcEAA&ved=2ahUKEwiHhKecieT_AhW5LbkGHaMID_IQ_BJ6BAhkEAg',
+                },
+            ],
         },
 
         {
             title: 'North Vancouver',
-            address: ['1331 Marine Drive'],
+            address: [
+                {
+                    label: '1331 Marine Drive',
+                    google_maps_location:
+                        'https://www.google.com/maps/place/ICBC+Driver+Licensing/@49.3233252,-123.1115286,15z/data=!4m2!3m1!1s0x0:0xc1971da7cb360f5f?sa=X&ved=2ahUKEwiNlMGoieT_AhXZArkGHZioAsEQ_BJ6BAhfEAA&ved=2ahUKEwiNlMGoieT_AhXZArkGHZioAsEQ_BJ6BAhtEAg',
+                },
+            ],
         },
     ],
 };

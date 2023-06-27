@@ -3,6 +3,7 @@ import { Container } from './base/Container';
 import styled from 'styled-components';
 import { WhatsApp, Facebook, Instagram } from '@mui/icons-material';
 import { pageSettings } from 'src/utils/pageSettings';
+import { SiGooglemaps } from 'react-icons/si';
 
 const StyledSubTitle = styled.h2<{ margin?: string }>`
     margin-top: 60px;
@@ -87,12 +88,20 @@ const StyledServiceTitle = styled.p`
 
 const StyledLi = styled.li`
     font-family: var(--font-family);
-    text-align: center;
     text-decoration: none;
     list-style-type: none;
     color: var(--primary);
-    padding: 0;
-    margin: 0;
+    align-items: center;
+    display: flex;
+    padding: 5px;
+    width: max-content;
+    margin: 0 auto;
+
+    svg {
+        margin-right: 5px;
+        font-size: 22px;
+        color: var(--primary);
+    }
 
     &:hover {
         font-weight: 600;
@@ -110,7 +119,6 @@ export const Contact = () => {
             <a target="_blank" href={`mailto: ${pageSettings.email_address}`} style={{ textDecoration: 'none' }}>
                 <StyledText cursorPointer>{pageSettings.email_address}</StyledText>
             </a>
-
             <StyledSubTitle>Phone Number</StyledSubTitle>
             <a
                 target="_blank"
@@ -132,18 +140,20 @@ export const Contact = () => {
                                     style={{
                                         textDecoration: 'none',
                                     }}
-                                    key={e}
+                                    key={e.label}
                                     target="_blank"
-                                    href="https://www.google.com/maps/place/1331+Marine+Dr,+West+Vancouver,+BC+V7T+1B6/@49.3232847,-123.1140639,17z/data=!3m1!4b1!4m6!3m5!1s0x54866e1997145957:0x1f2c5fa6675b1429!8m2!3d49.3232812!4d-123.111489!16s%2Fg%2F11c2bhvpvj?entry=ttu"
+                                    href={e.google_maps_location}
                                 >
-                                    <StyledLi>{e}</StyledLi>
+                                    <StyledLi>
+                                        <SiGooglemaps />
+                                        {e.label}
+                                    </StyledLi>
                                 </a>
                             );
                         })}
                     </StyledContainer>
                 );
             })}
-
             <SocialIcons>
                 <a
                     target="_blank"
