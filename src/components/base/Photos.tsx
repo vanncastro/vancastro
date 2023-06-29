@@ -174,7 +174,7 @@ export const Photos = () => {
                         aria-controls={`photo-content`}
                         id={`photo-header`}
                     >
-                        <StyledTitle>View Photos</StyledTitle>
+                        <StyledTitle>View Our Past Alumni Photos</StyledTitle>
                     </AccordionSummary>
                     <AccordionDetails>
                         <StyledImageList
