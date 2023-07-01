@@ -89,4 +89,8 @@ const StyledNote = styled.p`
     color: var(--background);
     font-size: 13px;
     font-weight: 800;
+    background-color: var(--primary);
+    padding: 15px;
+    border-radius: 20px;
+    width: fit-content;
 `;
