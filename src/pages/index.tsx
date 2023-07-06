@@ -12,6 +12,7 @@ import { Plans } from '../components/Plans';
 import { ScrollTop } from 'src/components/base/ScrollTop';
 import { Policies } from 'src/components/Policies';
 import { Contact } from 'src/components/Contact';
+import { Partnerships } from 'src/components/Partnerships';
 
 export default function Home() {
     return (
@@ -26,6 +27,7 @@ export default function Home() {
             <Photos />
             <Policies />
             <Contact />
+            <Partnerships />
             <Footer />
             <ScrollTop />
         </>

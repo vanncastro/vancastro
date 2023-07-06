@@ -8,6 +8,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { Link as ReactScroll } from 'react-scroll';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import dynamic from 'next/dynamic';
 import { MobileNavigation } from './base/MobileNavigation';
@@ -42,6 +43,10 @@ const StyledLogo = styled.div`
         margin-right: -8px;
         letter-spacing: 0.1rem;
     }
+`;
+
+const StyledImage = styled(Image)`
+    object-fit: contain;
 `;
 
 const pageIteration = page => {
@@ -95,14 +100,15 @@ export const Header = ({ driverPage }: { driverPage: boolean }) => {
                             textDecoration: 'none',
                         }}
                     >
-                        <StyledLogo>
+                        {/* <StyledLogo>
                             <Text type="header" color="var(--white)">
                                 {pageSettings.logo}
                             </Text>
                             <Text type="small" color="var(--white)">
                                 Driving School
                             </Text>
-                        </StyledLogo>
+                        </StyledLogo> */}
+                        <StyledImage src="/logo.png" alt="logo" width={120} height={70} />
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'space-around', overflow: 'scroll' }}>

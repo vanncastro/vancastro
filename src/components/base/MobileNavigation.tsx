@@ -10,6 +10,7 @@ import Toolbar from '@mui/material/Toolbar';
 import { Link as ReactScroll } from 'react-scroll';
 import Button from '@mui/material/Button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { Text } from './Text';
 import { pageSettings } from 'src/utils/pageSettings';
@@ -22,6 +23,10 @@ const StyledLogo = styled.div<{ margin?: string }>`
     letter-spacing: 0.1rem;
     font-size: 1.5rem;
     margin: ${props => props.margin || '0'};
+`;
+
+const StyledImage = styled(Image)`
+    object-fit: contain;
 `;
 
 const pageIteration = pg => {
@@ -82,14 +87,16 @@ export const MobileNavigation = ({ driverPage }: { driverPage: boolean }) => {
                     </IconButton>
                     {!mobileOpen && (
                         <Link href="/" style={{ textDecoration: 'none' }}>
-                            <StyledLogo margin={'-20px 0 0'}>
+                            {/* <StyledLogo margin={'-20px 0 0'}>
                                 <Text type="header" color="var(--white)">
                                     {pageSettings.logo}
                                 </Text>
                                 <Text type="small" color="var(--white)">
                                     Driving School
                                 </Text>
-                            </StyledLogo>
+                            </StyledLogo> */}
+
+                            <StyledImage src="/logo.png" alt="logo" width={90} height={50} />
                         </Link>
                     )}
 
@@ -113,16 +120,18 @@ export const MobileNavigation = ({ driverPage }: { driverPage: boolean }) => {
                         },
                     }}
                 >
-                    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+                    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', marginTop: '20px' }}>
                         <Link href="/" style={{ textDecoration: 'none' }}>
-                            <StyledLogo>
+                            {/* <StyledLogo>
                                 <Text type="header" color="var(--white)">
                                     {pageSettings.logo}
                                 </Text>
                                 <Text type="small" color="var(--white)">
                                     Driving School
                                 </Text>
-                            </StyledLogo>
+                            </StyledLogo> */}
+
+                            <StyledImage src="/logo.png" alt="logo" width={150} height={80} />
                         </Link>
                         <Divider sx={{ backgroundColor: 'var(--white)', marginTop: '20px' }} />
                         <List>
