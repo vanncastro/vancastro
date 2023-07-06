@@ -7,6 +7,10 @@ const StyledContainer = styled.div`
     display: flex;
     justify-content: center;
     gap: 20px;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
 `;
 
 const StyledImage = styled(Image)`
@@ -15,11 +19,25 @@ const StyledImage = styled(Image)`
     border-radius: 5px;
     border: 2px solid var(--primary);
     box-shadow: var(--primary) 0px 20px 30px -10px;
+
+    @media (max-width: 768px) {
+        display: block;
+        width: 80%;
+        height: 40%;
+        margin: 20px auto 0;
+    }
 `;
 
 export const Partnerships = () => {
     return (
-        <Container title={'Partnerships'} id="Partnership" hasLightBackground darkTitleColor height="100%">
+        <Container
+            title={'Partners'}
+            id="Partners"
+            hasLightBackground
+            darkTitleColor
+            height="100%"
+            paddingBottom={'40px'}
+        >
             <StyledContainer>
                 <StyledImage src="/partnership/elaine_yoshida.jpg" width={400} height={400} alt="elaine yoshida" />
                 <a href="https://facebook.com/icbcknowledgetestmaterial" target="_blank">
