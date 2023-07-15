@@ -35,12 +35,12 @@ export const Footer = () => {
                 </StyledText>
 
                 <StyledText height={1} type="small" color="#fff" textAlign="center">
-                    Developed by:{' '}
+                    {/* Developed by:{' '}
                     <a style={{ textDecoration: 'none' }} target="_blank" href={'https://www.github.com/ghbarreto'}>
                         {' '}
                         Gabriel Barreto
                     </a>{' '}
-                    &<a style={{ textDecoration: 'none' }}> Thaís Carmo</a>{' '}
+                    &<a style={{ textDecoration: 'none' }}> Thaís Carmo</a>{' '} */}
                 </StyledText>
             </Container>
         </FooterWrapper>
