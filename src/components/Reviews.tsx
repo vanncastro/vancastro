@@ -9,6 +9,7 @@ import { Autoplay, Navigation } from 'swiper';
 import { Container } from './base/Container';
 import { ReviewCard } from './base/ReviewCard';
 import styled from 'styled-components';
+import { pageSettings } from 'src/utils/pageSettings';
 
 const StyledSwiper = styled.div`
     max-width: 90%;
@@ -45,17 +46,14 @@ export const Reviews = () => {
                     spaceBetween={10}
                     loop={true}
                     grabCursor={true}
-                    autoplay={{
-                        delay: 4500,
-                        disableOnInteraction: true,
-                    }}
+                    autoplay={{ delay: 4500, disableOnInteraction: true, pauseOnMouseEnter: true }}
                     modules={[Autoplay, Navigation]}
                     className="mySwiper"
                 >
-                    {[...Array(10)].map((_, i) => {
+                    {pageSettings.reviews.map((event, i) => {
                         return (
                             <SwiperSlide key={`${i}+reviews`}>
-                                <ReviewCard />
+                                <ReviewCard review={event} />
                             </SwiperSlide>
                         );
                     })}

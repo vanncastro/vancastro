@@ -201,4 +201,66 @@ export const pageSettings = {
             ],
         },
     ],
+
+    reviews: [
+        {
+            name: 'Nome',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/iOCnhGZC5WM',
+            source_id: 'iOCnhGZC5WM',
+        },
+
+        {
+            name: 'Nome',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/3_3wr9n8wWA',
+            source_id: '3_3wr9n8wWA',
+        },
+
+        {
+            name: 'Nome',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/XBL-MAy4EmI',
+            source_id: 'XBL-MAy4EmI',
+        },
+
+        {
+            name: 'Nome',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/db7TcZlmORM',
+            source_id: 'db7TcZlmORM',
+        },
+
+        {
+            name: 'Nome',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/X61K5R02yRk',
+            source_id: 'X61K5R02yRk',
+        },
+
+        {
+            name: 'Nome',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/iOCnhGZC5WM',
+            source_id: 'iOCnhGZC5WM',
+        },
+    ],
 };

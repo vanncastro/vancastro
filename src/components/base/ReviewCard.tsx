@@ -5,6 +5,8 @@ import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
 
+import YouTube from 'react-youtube';
+
 import styled from 'styled-components';
 
 const StyledCard = styled(Card)`
@@ -22,17 +24,29 @@ const StyledAvatar = styled(Avatar)`
     background-color: red;
 `;
 
-const review = {
-    name: 'John Doe',
-    avatar: 'https://picsum.photos/id/1011/60/60',
-    rating: 4.7,
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
-    source: 'Google',
-    url: 'https://www.google.com/',
+const options = {
+    height: '350px',
+    width: '100%',
+    playerVars: {
+        // You can add any YouTube player parameters here
+        autoplay: 0,
+    },
 };
 
-export const ReviewCard = () => {
-    const { name, avatar, rating, text, source, url } = review;
+export const ReviewCard = ({
+    review,
+}: {
+    review: {
+        name: string;
+        avatar: string;
+        rating: number;
+        text: string;
+        source: string;
+        url: string;
+        source_id: string;
+    };
+}) => {
+    const { name, avatar, rating, source, url, source_id } = review;
 
     return (
         <StyledCard>
@@ -42,9 +56,10 @@ export const ReviewCard = () => {
                 subheader={<Rating name="read-only" value={rating} readOnly />}
             />
             <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
+                {/* <Typography variant="body2" color="textSecondary" component="p">
                     {text}
-                </Typography>
+                </Typography> */}
+                <YouTube videoId={source_id} opts={options} />
             </CardContent>
             <CardContent>
                 <Typography variant="caption" color="textSecondary" component="p">
