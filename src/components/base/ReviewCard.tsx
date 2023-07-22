@@ -24,6 +24,12 @@ const StyledAvatar = styled(Avatar)`
     background-color: red;
 `;
 
+const StyledFooterContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+
 const options = {
     height: '350px',
     width: '100%',
@@ -49,7 +55,7 @@ export const ReviewCard = ({
     const { name, avatar, rating, source, url, source_id } = review;
 
     return (
-        <StyledCard>
+        <StyledCard className="mySwiper">
             <CardHeader
                 avatar={<StyledAvatar aria-label={name} src={avatar} />}
                 title={name}
@@ -62,14 +68,18 @@ export const ReviewCard = ({
                 <YouTube videoId={source_id} opts={options} />
             </CardContent>
             <CardContent>
-                <Typography variant="caption" color="textSecondary" component="p">
-                    Reviewed on {source}
-                </Typography>
-                <Typography variant="caption" color="textSecondary" component="p">
-                    <a href={url} target="_blank" rel="noopener noreferrer">
-                        View on {source}
-                    </a>
-                </Typography>
+                <StyledFooterContainer>
+                    <div>
+                        <Typography variant="caption" color="textSecondary" component="p">
+                            Reviewed on {source}
+                        </Typography>
+                        <Typography variant="caption" color="textSecondary" component="p">
+                            <a href={url} target="_blank" rel="noopener noreferrer">
+                                View on {source}
+                            </a>
+                        </Typography>
+                    </div>
+                </StyledFooterContainer>
             </CardContent>
         </StyledCard>
     );

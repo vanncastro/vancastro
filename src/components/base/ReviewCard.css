@@ -1,0 +1,19 @@
+.swiper-button {
+    z-index: 10;
+    cursor: pointer;
+}
+.swiper-button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--primary);
+    @media (min-width: 1068px) {
+        margin: 50px 20px;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
+.swiper-button-disabled {
+    display: none;
+    pointer-events: none;
+}

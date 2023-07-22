@@ -209,16 +209,6 @@ export const pageSettings = {
             rating: 5,
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
             source: 'Youtube',
-            url: 'https://www.youtube.com/shorts/iOCnhGZC5WM',
-            source_id: 'iOCnhGZC5WM',
-        },
-
-        {
-            name: 'Nome',
-            avatar: 'https://picsum.photos/id/1011/60/60',
-            rating: 5,
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
-            source: 'Youtube',
             url: 'https://www.youtube.com/shorts/3_3wr9n8wWA',
             source_id: '3_3wr9n8wWA',
         },
