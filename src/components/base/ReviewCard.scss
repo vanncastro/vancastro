@@ -6,6 +6,12 @@
     width: 1.5rem;
     height: 1.5rem;
     color: var(--primary);
+    border-radius: 15px;
+
+    &:hover {
+        background-color: var(--primary_lighter);
+        transition: 0.2s ease-in-out;
+    }
     @media (min-width: 1068px) {
         margin: 50px 20px;
         width: 3.5rem;
