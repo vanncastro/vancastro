@@ -36,8 +36,6 @@ const StyledContainer = styled.div`
     border-bottom: 0;
     color: var(--white);
 
-    overflow: scroll;
-
     .Mui-expanded {
         background-color: var(--primary);
     }
