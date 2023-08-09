@@ -111,7 +111,7 @@ export const Header = ({ driverPage }: { driverPage: boolean }) => {
                         <StyledImage src="/logo.png" alt="logo" width={120} height={70} />
                     </Typography>
 
-                    <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'space-around', overflow: 'scroll' }}>
+                    <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'space-around' }}>
                         {!driverPage ? pageIteration(pageSettings.navMenu) : pageIteration(pageSettings.driverNav)}
                     </Box>
                 </Toolbar>
