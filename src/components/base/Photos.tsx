@@ -18,6 +18,10 @@ import { Container } from './Container';
 const StyledImage = styled.img`
     height: 200px;
     object-fit: cover;
+
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 const StyledTitle = styled.p`
@@ -35,6 +39,10 @@ const StyledContainer = styled.div`
     margin: 0 auto;
     border-bottom: 0;
     color: var(--white);
+
+    &:hover {
+        cursor: pointer;
+    }
 
     .Mui-expanded {
         background-color: var(--primary);
@@ -62,55 +70,45 @@ const StyledImageList = styled(ImageList)`
 
 const itemData = [
     {
-        img: '/photobook/tulio_nunes.png',
-        title: 'Tulio Nunes Class 7',
-        author: 'Tulio Nunes',
+        img: '/photobook/1.jpeg',
+        // title: 'Class 7',
+        author: 'Click to expand',
     },
     {
-        img: '/photobook/milton_tonial.png',
-        title: 'Milton Tonial Road Test 7',
-        author: 'Milton Tonial',
+        img: '/photobook/2.jpeg',
+        // title: 'Class 7',
+        author: 'Click to expand',
     },
 
     {
-        img: '/photobook/tulio_nunes.png',
-        title: 'Tulio Nunes Class 7',
-        author: 'Tulio Nunes',
+        img: '/photobook/3.jpeg',
+        // title: 'Tulio Nunes Class 7',
+        author: 'Click to expand',
     },
     {
-        img: '/photobook/milton_tonial.png',
-        title: 'Milton Tonial Road Test 7',
-        author: 'Milton Tonial',
+        img: '/photobook/4.jpeg',
+        // title: 'Click to expand Road Test 7',
+        author: 'Click to expand',
     },
     {
-        img: '/photobook/tulio_nunes.png',
-        title: 'Tulio Nunes Class 7',
-        author: 'Tulio Nunes',
+        img: '/photobook/5.jpeg',
+        // title: 'Tulio Nunes Class 7',
+        author: 'Click to expand',
     },
     {
-        img: '/photobook/milton_tonial.png',
-        title: 'Milton Tonial Road Test 7',
-        author: 'Milton Tonial',
+        img: '/photobook/6.jpeg',
+        // title: 'Click to expand Road Test 7',
+        author: 'Click to expand',
     },
     {
-        img: '/photobook/tulio_nunes.png',
-        title: 'Tulio Nunes Class 7',
-        author: 'Tulio Nunes',
+        img: '/photobook/7.jpeg',
+        // title: 'Tulio Nunes Class 7',
+        author: 'Click to expand',
     },
     {
-        img: '/photobook/milton_tonial.png',
-        title: 'Milton Tonial Road Test 7',
-        author: 'Milton Tonial',
-    },
-    {
-        img: '/photobook/tulio_nunes.png',
-        title: 'Tulio Nunes Class 7',
-        author: 'Tulio Nunes',
-    },
-    {
-        img: '/photobook/milton_tonial.png',
-        title: 'Milton Tonial Road Test 7',
-        author: 'Milton Tonial',
+        img: '/photobook/8.jpeg',
+        // title: 'Click to expand Road Test 7',
+        author: 'Click to expand',
     },
 ];
 
@@ -185,15 +183,20 @@ export const Photos = () => {
                         >
                             {itemData.map((item, index) => (
                                 <ImageListItem key={index} onClick={() => openImageViewer(index)}>
-                                    <StyledImage src={item.img} srcSet={item.img} alt={item.title} loading="lazy" />
+                                    <StyledImage
+                                        src={item.img}
+                                        srcSet={item.img}
+                                        alt={`img number ${index}`}
+                                        loading="lazy"
+                                    />
                                     <ImageListItemBar
-                                        title={item.title}
-                                        subtitle={item.author}
+                                        title={null}
+                                        subtitle={null}
                                         onClick={() => openImageViewer(index)}
                                         actionIcon={
                                             <IconButton
                                                 sx={{ color: 'var(--white)' }}
-                                                aria-label={`info about ${item.title}`}
+                                                aria-label={`info about ${item.img}`}
                                             >
                                                 <AspectRatioIcon />
                                             </IconButton>

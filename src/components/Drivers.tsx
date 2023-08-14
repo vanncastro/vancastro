@@ -92,7 +92,9 @@ const Driver = ({ agent }) => {
                         fontFamily: 'var(--font-family)',
                         fontWeight: '600',
                         color: 'var(--primary)',
-                        border: '1px solid var(--primary)',
+                        border: !Boolean(pageSettings[agent.name.toLowerCase()].calendly)
+                            ? ''
+                            : '1px solid var(--primary)',
                         height: '30px',
                         margin: '0 0 20px',
                         ':hover': {
@@ -100,6 +102,7 @@ const Driver = ({ agent }) => {
                         },
                     }}
                     color="primary"
+                    disabled={!Boolean(pageSettings[agent.name.toLowerCase()].calendly)}
                     size="large"
                     href={`/driver/${agent.name.toLowerCase()}#schedule`}
                 >

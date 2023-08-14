@@ -20,9 +20,7 @@ const StyledCard = styled(Card)`
     }
 `;
 
-const StyledAvatar = styled(Avatar)`
-    background-color: red;
-`;
+const StyledAvatar = styled(Avatar)``;
 
 const StyledFooterContainer = styled.div`
     display: flex;
@@ -57,8 +55,9 @@ export const ReviewCard = ({
     return (
         <StyledCard className="mySwiper">
             <CardHeader
-                avatar={<StyledAvatar aria-label={name} src={avatar} />}
-                title={name}
+                // avatar={<StyledAvatar aria-label={name} src={avatar} />}
+                avatar={<></>}
+                title={<div style={{ fontWeight: 'bold' }}>{name}</div>}
                 subheader={<Rating name="read-only" value={rating} readOnly />}
             />
             <CardContent>

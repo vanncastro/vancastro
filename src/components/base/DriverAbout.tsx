@@ -16,7 +16,7 @@ const StyledContainer = styled.section`
     align-items: start;
     padding: 2rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 830px) {
         display: block;
         margin: 0 auto;
     }
@@ -26,12 +26,10 @@ const StyledContentContainer = styled.div`
     display: flex;
     justify-content: center;
     margin-left: 20px;
-
-    @media (max-width: 768px) {
-    }
 `;
+
 const StyledImageContainer = styled.div`
-    @media (max-width: 768px) {
+    @media (max-width: 830px) {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -62,7 +60,7 @@ const StyledTitle = styled.h3`
     margin-left: 80px;
     font-weight: bold;
 
-    @media (max-width: 768px) {
+    @media (max-width: 830px) {
         font-size: 1.6rem;
         margin-top: 30px;
         margin-left: 0px;
@@ -83,7 +81,7 @@ const StyledParagraph = styled.p`
 
     text-align: left;
 
-    @media (max-width: 768px) {
+    @media (max-width: 830px) {
         font-size: 1.2rem;
         line-height: 40px;
         letter-spacing: 1.3px;

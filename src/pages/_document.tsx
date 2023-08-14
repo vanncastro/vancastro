@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 
-import Document, { Head, Html, Main, NextScript } from 'next/document';
+import Document, { Html, Main, NextScript, Head } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 import { pageSettings } from 'src/utils/pageSettings';
@@ -38,15 +38,23 @@ export default class MyDocument extends Document {
                     backgroundColor: 'var(--background)',
                 }}
             >
-                <title>{pageSettings.website_title}</title>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <title>{pageSettings.website_title}</title>
+
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
                 <link
                     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
                     rel="stylesheet"
                 />
 
-                <Head />
+                <Head>
+                    <meta property="og:title" content={pageSettings.meta.title} />
+                    <meta property="og:description" content={pageSettings.meta.desc} />
+                    <meta property="og:url" content={pageSettings.meta.url} />
+                    <meta property="og:site_name" content={pageSettings.meta.website_name} />
+                    <meta property="og:url" content={pageSettings.meta.url} />
+                    <meta property="og:type" content={'website'} />
+                </Head>
                 <body
                     style={{
                         padding: '0',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from './base/Container';
 import styled from 'styled-components';
-import { WhatsApp, Facebook, Instagram } from '@mui/icons-material';
+import { WhatsApp, Facebook, Instagram, YouTube } from '@mui/icons-material';
 import { pageSettings } from 'src/utils/pageSettings';
 import { SiGooglemaps } from 'react-icons/si';
 
@@ -43,6 +43,7 @@ const SocialIcons = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
     & > *,
     svg {
@@ -167,6 +168,10 @@ export const Contact = () => {
                 </a>
                 <a target="_blank" style={{ textDecoration: 'none' }} href={pageSettings.instagram_link}>
                     <Instagram />
+                </a>
+
+                <a target="_blank" style={{ textDecoration: 'none' }} href={pageSettings.youtube_link}>
+                    <YouTube />
                 </a>
             </SocialIcons>
         </Container>

@@ -15,22 +15,36 @@ const StyledDiv = styled.div`
 
 export const Schedule = ({ selectedDriver }: { selectedDriver: string }) => {
     return (
-        <Container title="Schedule" id="schedule" hasLightBackground height={'140vh'} darkTitleColor>
+        <Container
+            title="Schedule"
+            id="schedule"
+            hasLightBackground
+            height={pageSettings[selectedDriver].calendly ? '140vh' : '50vh'}
+            darkTitleColor
+        >
             <StyledDiv>
                 <Text color={'var(--primary)'} type="header">
                     You are scheduling with <span style={{ color: 'var(--background)' }}>{selectedDriver}</span>
                 </Text>
             </StyledDiv>
 
-            <InlineWidget
-                pageSettings={{
-                    backgroundColor: 'var(--background)',
-                    primaryColor: 'var(--primary)',
-                    textColor: 'var(--background)',
-                }}
-                styles={{ height: '100vh' }}
-                url={pageSettings[selectedDriver].calendly}
-            />
+            {pageSettings[selectedDriver].calendly ? (
+                <InlineWidget
+                    pageSettings={{
+                        backgroundColor: 'var(--background)',
+                        primaryColor: 'var(--primary)',
+                        textColor: 'var(--background)',
+                    }}
+                    styles={{ height: '100vh' }}
+                    url={pageSettings[selectedDriver].calendly}
+                />
+            ) : (
+                <StyledDiv>
+                    <Text color={'var(--primary)'} type="body">
+                        Schedule Currently Unavailable
+                    </Text>
+                </StyledDiv>
+            )}
         </Container>
     );
 };

@@ -1,4 +1,10 @@
 export const pageSettings = {
+    meta: {
+        title: 'VanCastro Driving School | ICBC Class 4, 5, 7',
+        desc: `VanCastro offers expert guidance with licensed instructors for various license classes including Class 5, 7, and 4. Feel free to reach out at 6046009173 to get started on your journey towards confident and skilled driving.`,
+        website_name: 'VanCastro Driving School',
+        url: 'https://www.vancastro.ca',
+    },
     website_title: 'VanCastro Driving School',
     logo: 'VanCastro',
     navMenu: ['About', 'Plans', 'Schedule', 'Reviews', 'Policies', 'Contact'],
@@ -14,11 +20,12 @@ export const pageSettings = {
 
     facebook_link: 'https://www.facebook.com/profile.php?id=100088028419878',
     instagram_link: 'https://www.instagram.com/vancastro_drivingschool/',
+    youtube_link: 'https://www.youtube.com/@VanCastro_Driving_School',
 
     andresa: {
         logo: '/andresa.png',
         display_name: 'Andresa',
-        calendly: 'https://calendly.com',
+        calendly: null,
         about: 'With experience in training in Brazil and Canada, Andresa started out taking care of the administrative side of VanCastro and over time began to admire how happy and fulfilled Anderson had become with the birth and growth of VanCastro. In a short time, she decided to study to also acquire her license to also become an Instructor Driver. Andresa also has over 25 years driving experience. If you have a challenge, Andresa is the woman to call.',
     },
 
@@ -204,17 +211,110 @@ export const pageSettings = {
 
     reviews: [
         {
-            name: 'Nome',
+            name: 'Thiago Salles - ICBC Longheed',
             avatar: 'https://picsum.photos/id/1011/60/60',
             rating: 5,
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
             source: 'Youtube',
-            url: 'https://www.youtube.com/shorts/3_3wr9n8wWA',
-            source_id: '3_3wr9n8wWA',
+            url: 'https://www.youtube.com/shorts/g3W_rDN3Utk',
+            source_id: 'g3W_rDN3Utk',
         },
 
         {
-            name: 'Nome',
+            name: 'Leandro Giometti',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/Wf_D5Zr1G7E',
+            source_id: 'Wf_D5Zr1G7E',
+        },
+
+        {
+            name: 'Marcio Sartorelli',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://youtube.com/shorts/9kF-nZZGBLE',
+            source_id: '9kF-nZZGBLE',
+        },
+
+        {
+            name: 'Gabriel',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/1JtzGhZiA38',
+            source_id: '1JtzGhZiA38',
+        },
+
+        {
+            name: 'João Victor',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/Wb872nfa570',
+            source_id: 'Wb872nfa570',
+        },
+        {
+            name: 'Najla Angeline',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/dG8LpE7uJIg',
+            source_id: 'dG8LpE7uJIg',
+        },
+        {
+            name: 'Daniela Leon',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/QgVf9_HguqU',
+            source_id: 'QgVf9_HguqU',
+        },
+        {
+            name: 'Camila Almeida',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/NaPN2IXfQhI',
+            source_id: 'NaPN2IXfQhI',
+        },
+        {
+            name: 'Nelson',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/U7Rj3aDuR5I',
+            source_id: 'U7Rj3aDuR5I',
+        },
+        {
+            name: 'Damaris',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/fPningryAXQ',
+            source_id: 'fPningryAXQ',
+        },
+        {
+            name: 'Milena',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/yuSfsj7ghD4',
+            source_id: 'yuSfsj7ghD4',
+        },
+        {
+            name: 'Alex',
             avatar: 'https://picsum.photos/id/1011/60/60',
             rating: 5,
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
@@ -222,9 +322,17 @@ export const pageSettings = {
             url: 'https://www.youtube.com/shorts/XBL-MAy4EmI',
             source_id: 'XBL-MAy4EmI',
         },
-
         {
-            name: 'Nome',
+            name: 'Laisa',
+            avatar: 'https://picsum.photos/id/1011/60/60',
+            rating: 5,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
+            source: 'Youtube',
+            url: 'https://www.youtube.com/shorts/3_3wr9n8wWA',
+            source_id: '3_3wr9n8wWA',
+        },
+        {
+            name: 'Thais',
             avatar: 'https://picsum.photos/id/1011/60/60',
             rating: 5,
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
@@ -232,25 +340,14 @@ export const pageSettings = {
             url: 'https://www.youtube.com/shorts/db7TcZlmORM',
             source_id: 'db7TcZlmORM',
         },
-
         {
-            name: 'Nome',
+            name: 'Leonardo',
             avatar: 'https://picsum.photos/id/1011/60/60',
             rating: 5,
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
             source: 'Youtube',
             url: 'https://www.youtube.com/shorts/X61K5R02yRk',
             source_id: 'X61K5R02yRk',
-        },
-
-        {
-            name: 'Nome',
-            avatar: 'https://picsum.photos/id/1011/60/60',
-            rating: 5,
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae sapien vel metus bibendum sodales. Quisque sed magna eget velit feugiat porttitor. In euismod suscipit sagittis. Sed ut turpis non enim fringilla hendrerit ac eu velit.',
-            source: 'Youtube',
-            url: 'https://www.youtube.com/shorts/iOCnhGZC5WM',
-            source_id: 'iOCnhGZC5WM',
         },
     ],
 };
