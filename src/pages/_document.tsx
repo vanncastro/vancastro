@@ -49,6 +49,7 @@ export default class MyDocument extends Document {
 
                 <Head>
                     <meta property="og:title" content={pageSettings.meta.title} />
+                    <meta property="description" content={pageSettings.meta.desc} />
                     <meta property="og:description" content={pageSettings.meta.desc} />
                     <meta property="og:url" content={pageSettings.meta.url} />
                     <meta property="og:site_name" content={pageSettings.meta.website_name} />
