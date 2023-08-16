@@ -1,7 +1,7 @@
 export const pageSettings = {
     meta: {
-        title: 'VanCastro Driving School | ICBC Class 4, 5, 7',
-        desc: `VanCastro offers expert guidance with licensed instructors for various license classes including Class 5, 7, and 4. Feel free to reach out at 6046009173 to get started on your journey towards confident and skilled driving.`,
+        title: 'VanCastro Driving School | ICBC Class 5, 7',
+        desc: `VanCastro offers expert guidance with licensed instructors for various license classes including Class 5, and 7. Feel free to reach out at 6046009173 to get started on your journey towards confident and skilled driving.`,
         website_name: 'VanCastro Driving School',
         url: 'https://www.vancastro.ca',
     },
