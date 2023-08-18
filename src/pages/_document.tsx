@@ -55,6 +55,7 @@ export default class MyDocument extends Document {
                     <meta property="og:site_name" content={pageSettings.meta.website_name} />
                     <meta property="og:url" content={pageSettings.meta.url} />
                     <meta property="og:type" content={'website'} />
+                    <link rel="icon" href="/public/favicon.ico" />
                 </Head>
                 <body
                     style={{
