@@ -7,6 +7,7 @@ const StyledContainer = styled.div`
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 
     @media (max-width: 768px) {
         display: block;
@@ -43,6 +44,7 @@ export const Partnerships = () => {
                 <a href="https://facebook.com/icbcknowledgetestmaterial" target="_blank">
                     <StyledImage src="/partnership/kika_.jpg" width={400} height={400} alt="kika" />
                 </a>
+                <StyledImage src="/partnership/debora.jpeg" width={400} height={400} alt="debora " />
             </StyledContainer>
         </Container>
     );
