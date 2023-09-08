@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container } from './base/Container';
 import { Link } from 'react-scroll';
+import Image from 'next/image';
 import { FaCarSide, FaPlayCircle } from 'react-icons/fa';
 import {
     TbSquareRoundedNumber1Filled,
@@ -50,7 +51,9 @@ export const Plans = () => {
     return (
         <Container title="plans" id="plans" darkTitleColor height={'100%'}>
             <StyledDiv>
-                {pricePlans.map(plan => (
+                <Image src="/plans1.jpeg" alt="plans" width={800} height={40} />
+                <Image src="/plans2.jpeg" alt="plans" width={800} height={40} />
+                {/* {pricePlans.map(plan => (
                     <StyledPriceCard key={plan.id}>
                         <StyledIcon>{plan.icon}</StyledIcon>
 
@@ -63,7 +66,7 @@ export const Plans = () => {
                             <StyledButton>Inquire</StyledButton>
                         </Link>
                     </StyledPriceCard>
-                ))}
+                ))} */}
             </StyledDiv>
         </Container>
     );
@@ -76,9 +79,27 @@ const StyledDiv = styled.div`
     margin: 0 auto;
     flex-wrap: wrap;
 
+    img {
+        background-size: cover;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -o-crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor;
+        object-fit: cover;
+        height: auto;
+        width: auto;
+        margin-left: 15px;
+    }
+
     @media (max-width: 800px) {
         margin: 150px auto;
         flex-direction: column;
+
+        img {
+            width: 100%;
+            margin-top: 20px;
+        }
     }
 `;
 
