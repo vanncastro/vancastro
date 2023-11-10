@@ -6,7 +6,7 @@ import { Link } from 'react-scroll';
 export const Landing = () => {
     return (
         <StyledWrapper>
-            <StyledImage src="/landing.jpg" alt="Landing page image" />
+            <StyledImage src="/landing.jpeg" alt="Landing page image" />
             <Link to="schedule" spy smooth>
                 <StyledButton>Schedule</StyledButton>
             </Link>

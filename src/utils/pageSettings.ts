@@ -23,14 +23,14 @@ export const pageSettings = {
     youtube_link: 'https://www.youtube.com/@VanCastro_Driving_School',
 
     andresa: {
-        logo: '/andresa.png',
+        logo: '/andresa-driver.jpeg',
         display_name: 'Andresa',
         calendly: null,
         about: 'With experience in training in Brazil and Canada, Andresa started out taking care of the administrative side of VanCastro and over time began to admire how happy and fulfilled Anderson had become with the birth and growth of VanCastro. In a short time, she decided to study to also acquire her license to also become an Instructor Driver. Andresa also has over 25 years driving experience. If you have a challenge, Andresa is the woman to call.',
     },
 
     anderson: {
-        logo: '/anderson.png',
+        logo: '/anderson-driver.jpeg',
         display_name: 'Anderson',
         calendly: 'https://calendly.com/accastro1307/30min',
         about: 'His passion for cars started long time ago. Anderson worked in Brazil for many years developing great safe work environments. Always focus in safe. When he got his BC driving licence in Vancouver-Canada, he saw the perfect combination of the two of his passion, cars and safe. Starting at this point, VanCastro Driving School came to make the dream reality.  Anderson is a solid hard-working Driving instructor with more than 25 years driving around the world. His calm demeanor helps him to specialise in the nervous student. Also, Anderson can teach in Portuguese and English. He can help you, give him a call!',
@@ -41,14 +41,14 @@ export const pageSettings = {
             id: 1,
             name: 'Anderson',
             about: 'Anderson has over 25 years of experience driving around the world. His passion for cars and safety inspired him to create VanCastro Driving School. He specializes in helping nervous students and can teach in both Portuguese and English.',
-            imageUrl: '/anderson.png',
+            imageUrl: '/anderson.jpeg',
         },
 
         {
             id: 2,
             name: 'Andresa',
             about: 'Andresa is a licensed driving instructor with over 25 years of experience driving around the world. She prioritizes safety and offers comprehensive learning with flexible scheduling options and can teach in both Portuguese and English.',
-            imageUrl: '/andresa.png',
+            imageUrl: '/andresa.jpeg',
         },
     ],
 
