@@ -32,7 +32,7 @@ export const pageSettings = {
     anderson: {
         logo: '/anderson-driver.jpeg',
         display_name: 'Anderson',
-        calendly: 'https://calendly.com/accastro1307/30min',
+        calendly: null,
         about: 'His passion for cars started long time ago. Anderson worked in Brazil for many years developing great safe work environments. Always focus in safe. When he got his BC driving licence in Vancouver-Canada, he saw the perfect combination of the two of his passion, cars and safe. Starting at this point, VanCastro Driving School came to make the dream reality.  Anderson is a solid hard-working Driving instructor with more than 25 years driving around the world. His calm demeanor helps him to specialise in the nervous student. Also, Anderson can teach in Portuguese and English. He can help you, give him a call!',
     },
 
