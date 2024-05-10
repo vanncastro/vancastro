@@ -13,8 +13,8 @@ export const pageSettings = {
   client_location: 'Vancouver',
   company_creation_date: '2002',
   email_address: 'vancastrodrivingschool@gmail.com',
-  phone_number: '+1 604-600-9173',
-  unformated_phone_number: '16046009173',
+  phone_number: ['+1 604-600-9173', '+1 778-680-5613'],
+  unformated_phone_number: ['16046009173', '17786805613'],
   whats_app_text: 'Hello, I was browsing vancastro website and would like to know more about your services',
   current_drivers: ['andresa', 'anderson'],
 
@@ -211,6 +211,28 @@ export const pageSettings = {
         },
       ],
     },
+
+    {
+      title: 'Surrey',
+      address: [
+        {
+          label: '13665 68 Ave',
+          google_maps_location: 'https://maps.app.goo.gl/Gr3RKnUYUbgbPfr46'
+        },
+        {
+          label: '13426 78 Ave',
+          google_maps_location: 'https://maps.app.goo.gl/vGoFnyHSRiDb48C19'
+        },
+        {
+          label: '15285 101st Ave',
+          google_maps_location: 'https://maps.app.goo.gl/4N7tLbv95dMJRAedA'
+        },
+        {
+          label: '10262 152A St',
+          google_maps_location: 'https://maps.app.goo.gl/Sj8Ej6qkPCCA7ZPy8'
+        }
+      ]
+    }
   ],
 
   reviews: [
