@@ -180,35 +180,35 @@ export const Contact = () => {
           );
         })}
       </StyledSection>
-      <StyledSubTitle margin={"0 0 -40px"}>Service Area</StyledSubTitle>
+      {/*<StyledSubTitle margin={"0 0 -40px"}>Service Area</StyledSubTitle>*/}
 
-      <StyledSection>
-        {pageSettings.service_area.map((area, index) => {
-          return (
-            <StyledContainer key={`${index}service`}>
-              <StyledServiceTitle>{area.title}</StyledServiceTitle>
+      {/*<StyledSection>*/}
+      {/*  {pageSettings.service_area.map((area, index) => {*/}
+      {/*    return (*/}
+      {/*      <StyledContainer key={`${index}service`}>*/}
+      {/*        <StyledServiceTitle>{area.title}</StyledServiceTitle>*/}
 
-              {area.address.map((e) => {
-                return (
-                  <a
-                    style={{
-                      textDecoration: "none",
-                    }}
-                    key={e.label}
-                    target="_blank"
-                    href={e.google_maps_location}
-                  >
-                    <StyledLi>
-                      <SiGooglemaps />
-                      {e.label}
-                    </StyledLi>
-                  </a>
-                );
-              })}
-            </StyledContainer>
-          );
-        })}
-      </StyledSection>
+      {/*        {area.address.map((e) => {*/}
+      {/*          return (*/}
+      {/*            <a*/}
+      {/*              style={{*/}
+      {/*                textDecoration: "none",*/}
+      {/*              }}*/}
+      {/*              key={e.label}*/}
+      {/*              target="_blank"*/}
+      {/*              href={e.google_maps_location}*/}
+      {/*            >*/}
+      {/*              <StyledLi>*/}
+      {/*                <SiGooglemaps />*/}
+      {/*                {e.label}*/}
+      {/*              </StyledLi>*/}
+      {/*            </a>*/}
+      {/*          );*/}
+      {/*        })}*/}
+      {/*      </StyledContainer>*/}
+      {/*    );*/}
+      {/*  })}*/}
+      {/*</StyledSection>*/}
       <SocialIcons>
         <a
           target="_blank"
