@@ -52,7 +52,7 @@ export const Plans = () => {
         <Container title="plans" id="plans" darkTitleColor height={'100%'}>
             <StyledDiv>
                 <Image src="/plans2.jpeg" alt="plans" width={800} height={40} />
-                <Image src="/plans1.jpeg" alt="plans" width={800} height={40} />
+                <Image src="/plans1.png" alt="plans" width={800} height={40} />
                 {/* {pricePlans.map(plan => (
                     <StyledPriceCard key={plan.id}>
                         <StyledIcon>{plan.icon}</StyledIcon>
